@@ -10,7 +10,7 @@ from models import User, Role,Group
 import json
 
 
-@app.route('/v1.0/tasks', methods=['GET'])
+@app.route('/', methods=['GET'])
 def login():
     # nickname=request.json['nickname']
     # password=request.json['password']
