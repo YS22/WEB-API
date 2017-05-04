@@ -12,7 +12,7 @@ import json
 
 @app.route('/', methods=['GET'])
 def login():
-    # nickname=request.json['nickname']
+
     # password=request.json['password']
     # user=User.query.filter_by(nickname=nickname).first()
     # if user:
@@ -24,6 +24,11 @@ def login():
     #     db.session.commit()
     #     return jsonify({'message':'register access','GroupList':user.group.all() })
     return "11"
+
+@app.route('/api', methods=['POST'])
+def index():
+    nickname=request.json['nickname']
+    return jsonify({'nickname':nickname})
 """
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])
