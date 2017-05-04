@@ -10,25 +10,20 @@ from models import User, Role,Group
 import json
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['POST'])
 def login():
-
-    # password=request.json['password']
-    # user=User.query.filter_by(nickname=nickname).first()
-    # if user:
-    #  #     #return "11"
-    #     return jsonify({'GroupList':user.group.all()})
-    # else:
-    #     user = User(nickname=nickname,password=password)
-    #     db.session.add(user)
-    #     db.session.commit()
-    #     return jsonify({'message':'register access','GroupList':user.group.all() })
-    return "11"
-
-@app.route('/api', methods=['POST'])
-def index():
     nickname=request.json['nickname']
-    return jsonify({'nickname':nickname})
+    user=User.query.filter_by(nickname=nickname).first()
+    if user:
+        return jsonify({'nickname':user.nickname})
+    else:
+        user = User(nickname=nickname)
+        db.session.add(user)
+        db.session.commit()
+        return jsonify({'nickname':user.nickname})
+
+
+
 """
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])

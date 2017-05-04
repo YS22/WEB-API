@@ -11,7 +11,7 @@ db.Column('group_id', db.Integer, db.ForeignKey('group.id'))
 class User(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     nickname = db.Column(db.String(64), index = True, unique = True)
-    password =db.Column(db.String(128))
+    #password =db.Column(db.String(128))
     role= db.relationship('Role', backref = 'author',lazy = 'dynamic')
     group = db.relationship('Group',secondary=registrations,backref=db.backref('user', lazy='dynamic'),lazy='dynamic')
     
