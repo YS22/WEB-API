@@ -12,16 +12,16 @@ import json
 
 @app.route('/', methods=['GET'])
 def login():
-    # nickname=request.json['nickname']
-    # user=User.query.filter_by(nickname=nickname).first()
-    # if user:
-    #     return jsonify({'nickname':user.nickname})
-    # else:
-    #     user = User(nickname=nickname)
-    #     db.session.add(user)
-    #     db.session.commit()
-    #     return jsonify({'nickname':user.nickname})
-    return "ys"
+    nickname=request.json['nickname']
+    user=User.query.filter_by(nickname=nickname).first()
+    if user:
+        return jsonify({'nickname':user.nickname})
+    else:
+        user = User(nickname=nickname)
+        db.session.add(user)
+        db.session.commit()
+        return jsonify({'nickname':user.nickname})
+    
 
 
 """
