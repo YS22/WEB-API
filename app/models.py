@@ -9,14 +9,18 @@ db.Column('group_id', db.Integer, db.ForeignKey('group.id'))
 
 
 class User(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
-    nickname = db.Column(db.String(64), index = True, unique = True)
-    #password =db.Column(db.String(128))
-    role= db.relationship('Role', backref = 'author',lazy = 'dynamic')
+    id = db.Column(db.String, primary_key = True)
+    nickname = db.Column(db.String, index = True, unique = True)
+    gender=db.Column(db.String)
+    avatarUrl=db.Column(db.String)
+    tel=db.Column(db.String(11))
+    latitude=db.Column(db.String)
+    longitude=db.Column(db.String)
+    state=db.Column(db.String)
     group = db.relationship('Group',secondary=registrations,backref=db.backref('user', lazy='dynamic'),lazy='dynamic')
     
-    def avatar(self, size):
-        return 'http://www.gravatar.com/avatar/' + md5(self.password).hexdigest() + '?d=mm&s=' + str(size)
+    # def avatar(self, size):
+    #     return 'http://www.gravatar.com/avatar/' + md5(self.password).hexdigest() + '?d=mm&s=' + str(size)
 
     def is_authenticated(self):
         return True
@@ -37,15 +41,8 @@ class User(db.Model):
         return '<User %r>' % (self.nickname)
 
 
-
-class Role(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
-    position = db.Column(db.String(140))
-    name=db.Column(db.String(64), index = True, unique = True)
-    tel=db.Column(db.String())
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-
-
 class Group(db.Model):
     id = db.Column(db.Integer, primary_key = True)
-    groupname = db.Column(db.String)
+    name = db.Column(db.String)
+    createTime=db.Column(db.DateTime)
+    tag=db.Column(db.String)

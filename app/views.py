@@ -1,26 +1,123 @@
 # -*- coding: utf-8 -*-
-from flask import session,request,jsonify
-#from flask_login import login_user, logout_user, current_user, login_required
-from app import app,db,models
-from forms import LoginForm
-from models import User
+from flask import session,request,jsonify,g
+from flask_login import  login_required ,current_user
+from app import app,db,models,oid,lm
 #from forms import LoginForm,RegistrationForm,InfoForm,EstablishForm,JoinForm,IndexForm
-from models import User, Role,Group
+from models import User,Group
 #from datetime import datetime
 import json
+from WXBizDataCrypt import WXBizDataCrypt
+import requests
 
+def postgroup(args):
+    allgroupInfo=[]
+    groupList=args.group.all()
+    for groups in groupList:
+        groupsInfo={}
+        groupsInfo={"id":groups.id,"name":groups.name,"createTime":groups.createTime,"tag":groups.tag}
+        allgroupInfo.append(groupsInfo)
+    print allgroupInfo
+    return allgroupInfo
 
-@app.route('/', methods=['GET'])
+appId = 'wxe5c697071cafbf44'
+appSecret ='e5315816666a005346c0c16aff14b168'
+
+currentId=''
+
+@app.route('/v1.0/login', methods=['POST'])
 def login():
-    nickname=request.json['nickname']
-    user=User.query.filter_by(nickname=nickname).first()
+    global currentId
+    print "------------------"
+    print request.json
+    
+    encryptedData=request.json['encryptedData']
+    iv=request.json['iv']
+    code=request.json['code']
+
+    #step1:code -> sessionKey
+    keyURL= 'https://api.weixin.qq.com/sns/jscode2session?appid='+appId+'&secret='+appSecret+'&js_code='+code+'&grant_type=authorization_code'
+    r = requests.post(keyURL)
+    print r.json()
+    sessionKey=r.json()["session_key"]
+
+    pc = WXBizDataCrypt(appId, sessionKey)
+    info= pc.decrypt(encryptedData, iv)
+    print info
+    print type(info)
+    #get info 
+    openId= info['openId']
+    gender= info['gender']
+    nickname=info['nickName']
+    avatarUrl=info['avatarUrl']
+   
+    print openId,gender,nickname,avatarUrl
+    currentId=openId
+    user=User.query.filter_by(id=openId).first()
+
+    print "OK----------------"
     if user:
-        return jsonify({'nickname':user.nickname})
+        allgroupInfo=postgroup(user)
+        return json.dumps(allgroupInfo)
+
     else:
-        user = User(nickname=nickname)
+        user=User(id=openId,gender=gender,nickname=nickname,avatarUrl=avatarUrl)
         db.session.add(user)
         db.session.commit()
-        return jsonify({'nickname':user.nickname})
+        allgroupInfo=postgroup(user)
+        return json.dumps(allgroupInfo)
+
+@app.route('/v1.0/group/<id>', methods=['GET'])
+#@login_required
+def group(id):
+    global currentId
+    group=Group.query.filter_by(id=id).first()
+    alluserInfo=[]
+    print "iiii------------------"
+    print currentId
+    currentUser=User.query.filter_by(id=currentId).first()
+    if currentUser.latitude==None:
+        return json.dumps(0)
+    else:
+        if group:
+            userList=group.user.all()
+            for users in userList:
+                usersInfo={}
+                usersInfo={"id":users.id,"nickname":users.nickname,"state":users.state,"gender":users.gender,"avatarUrl":users.avatarUrl,"tel":users.tel,"latitude":users.latitude,"longitude":users.longitude}
+                alluserInfo.append(usersInfo)
+            print alluserInfo
+            return json.dumps(alluserInfo)
+            
+@app.route('/v1.0/location', methods=['POST'])
+def loaction():
+    print "getlocation"
+    global currentId
+    currentUser=User.query.filter_by(id=currentId).first()
+    latitude=request.json['latitude']
+    longitude=request.json['longitude']
+    if latitude==None or longitude==None:
+        return json.dumps("unupdate location")
+
+    else:
+        currentUser.latitude=latitude
+        currentUser.longitude=longitude
+        db.session.add(currentUser)
+        db.session.commit()
+        return json.dumps("update location")
+
+# @app.before_request
+# def before_request():
+#     g.user = current_user
+#     print "=========================="
+#     #print current_user.nickname
+
+    # user=User.query.filter_by(nickname=nickname).first()
+    # if user:
+    #     return jsonify({'nickname':user.nickname})
+    # else:
+    #     user = User(nickname=nickname)
+    #     db.session.add(user)
+    #     db.session.commit()
+    #     return jsonify({'nickname':user.nickname})
     
 
 
