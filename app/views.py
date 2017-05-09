@@ -81,7 +81,7 @@ def group(id):
             getuserInfo={}
             getuserInfo={"id":userInfo.id,"nickname":userInfo.nickname,"state":userInfo.state,"gender":userInfo.gender,"avatarUrl":userInfo.avatarUrl,"tel":userInfo.tel,"latitude":userInfo.latitude,"longitude":userInfo.longitude}
             users.append(getuserInfo)
-        grouInfo=[]
+        groupsInfo={}
         groupsInfo={"id":groups.id,"name":groups.name,"createTime":groups.createTime,"tag":groups.tag,"users":json.dumps(users)}
         allgroupInfo.append(groupsInfo)
     return json.dumps(allgroupInfo)
