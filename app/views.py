@@ -1,23 +1,32 @@
 # -*- coding: utf-8 -*-
-from flask import session,request,jsonify,g
-from flask_login import  login_required ,current_user
-from app import app,db,models,oid,lm
+from flask import session,request,jsonify
+from flask_login import  login_required 
+from app import app,db,models
 #from forms import LoginForm,RegistrationForm,InfoForm,EstablishForm,JoinForm,IndexForm
 from models import User,Group
 #from datetime import datetime
 import json
 from WXBizDataCrypt import WXBizDataCrypt
 import requests
+import datetime
 
-# def postgroup(args):
-#     allgroupInfo=[]
-#     groupList=args.group.all()
-#     for groups in groupList:
-#         groupsInfo={}
-#         groupsInfo={"id":groups.id,"name":groups.name,"createTime":groups.createTime,"tag":groups.tag}
-#         allgroupInfo.append(groupsInfo)
-#     print allgroupInfo
-#     return allgroupInfo
+
+def getuserInfo(id):
+    getUser=User.query.filter_by(id=id).first()
+    groupList=getUser.group.all()
+    allgroupInfo=[]
+    for groups  in groupList:
+        groupsAlluser=groups.user.all()
+        users=[]
+        for userInfo in groupsAlluser:
+            getuserInfo={}
+            getuserInfo={"id":userInfo.id,"nickname":userInfo.nickname,"state":userInfo.state,"gender":userInfo.gender,"avatarUrl":userInfo.avatarUrl,"tel":userInfo.tel,"latitude":userInfo.latitude,"longitude":userInfo.longitude}
+            users.append(getuserInfo)
+        groupsInfo={}
+        groupsInfo={"id":groups.id,"name":groups.name,"createTime":str(groups.createTime),"users":users}
+        allgroupInfo.append(groupsInfo)
+    return allgroupInfo
+
 
 appId = 'wxe5c697071cafbf44'
 appSecret ='e5315816666a005346c0c16aff14b168'
@@ -57,52 +66,21 @@ def login():
     if users:
         userInfo={"id":users.id,"nickname":users.nickname,"state":users.state,"gender":users.gender,"avatarUrl":users.avatarUrl,"tel":users.tel,"latitude":users.latitude,"longitude":users.longitude}
         return json.dumps(userInfo)
-        # allgroupInfo=postgroup(user)
-        # return json.dumps(allgroupInfo)
     else:
         user=User(id=openId,gender=gender,nickname=nickname,avatarUrl=avatarUrl)
         db.session.add(user)
         db.session.commit()
         userInfo={"id":users.id,"nickname":users.nickname,"state":users.state,"gender":users.gender,"avatarUrl":users.avatarUrl,"tel":users.tel,"latitude":users.latitude,"longitude":users.longitude}
         return json.dumps(userInfo)
-        # allgroupInfo=postgroup(user)
-        # return json.dumps(allgroupInfo)
+    
 
 @app.route('/v1.0/groups/<id>', methods=['GET'])
 #@login_required
 def group(id):
-    getUser=User.query.filter_by(id=id).first()
-    groupList=getUser.group.all()
-    allgroupInfo=[]
-    for groups  in groupList:
-        groupsAlluser=groups.user.all()
-        users=[]
-        for userInfo in groupsAlluser:
-            getuserInfo={}
-            getuserInfo={"id":userInfo.id,"nickname":userInfo.nickname,"state":userInfo.state,"gender":userInfo.gender,"avatarUrl":userInfo.avatarUrl,"tel":userInfo.tel,"latitude":userInfo.latitude,"longitude":userInfo.longitude}
-            users.append(getuserInfo)
-        groupsInfo={}
-        groupsInfo={"id":groups.id,"name":groups.name,"createTime":groups.createTime,"tag":groups.tag,"users":json.dumps(users)}
-        allgroupInfo.append(groupsInfo)
+    allgroupInfo=getuserInfo(id)
     return json.dumps(allgroupInfo)
-    # global currentId
-    # group=Group.query.filter_by(id=id).first()
-    # alluserInfo=[]
-    # print "iiii------------------"
-    # print currentId
-    # currentUser=User.query.filter_by(id=currentId).first()    
-    # if currentUser.latitude==None:
-    #     return json.dumps(0)
-    # else:
-    #     if group:
-    #         userList=group.user.all()
-    #         for users in userList:
-    #             usersInfo={}
-    #             usersInfo={"id":users.id,"nickname":users.nickname,"state":users.state,"gender":users.gender,"avatarUrl":users.avatarUrl,"tel":users.tel,"latitude":users.latitude,"longitude":users.longitude}
-    #             alluserInfo.append(usersInfo)
-    #         print alluserInfo
-    #         return json.dumps(alluserInfo)
-            
+
+
 @app.route('/v1.0/location', methods=['POST'])
 def loaction():
     print "getlocation"
@@ -112,7 +90,6 @@ def loaction():
     longitude=request.json['longitude']
     if latitude==None or longitude==None:
         return json.dumps(0)
-
     else:
         currentUser.latitude=latitude
         currentUser.longitude=longitude
@@ -120,6 +97,66 @@ def loaction():
         db.session.commit()
         userInfo={"id":currentUser.id,"nickname":currentUser.nickname,"state":currentUser.state,"gender":currentUser.gender,"avatarUrl":currentUser.avatarUrl,"tel":currentUser.tel,"latitude":currentUser.latitude,"longitude":currentUser.longitude}
         return json.dumps(userInfo)
+
+
+@app.route('/v1.0/addgroup', methods=['POST'])
+def add():
+    name=request.json['name']
+    id=request.json['userId']
+    group=Group(name=name,createTime=datetime.date.today())
+    db.session.add(group)
+    db.session.commit()
+    user=User.query.filter_by(id=id).first()
+    user.group.append(group)
+    db.session.add(user)
+    db.session.commit()
+    allgroupInfo=getuserInfo(id)
+    return json.dumps(allgroupInfo)
+
+
+@app.route('/v1.0/joingroup', methods=['POST'])
+def join():
+    groupId=request.json['gruopId']
+    userId=request.json['userId']
+    getuser=User.query.filter_by(id=userId).first()
+    getgroup=Group.query.filter_by(id=groupId).first()
+    getuser.group.append(getgroup)
+    db.session.add(getuser)
+    db.session.commit()
+    allgroupInfo=getuserInfo(userId)
+    return json.dumps(allgroupInfo)
+
+
+@app.route('/v1.0/abortgroup', methods=['POST'])
+def abort():
+    groupId=request.json['gruopId']
+    userId=request.json['userId']
+    getuser=User.query.filter_by(id=userId).first()
+    getgroup=Group.query.filter_by(id=groupId).first()
+    getuser.group.remove(getgroup)
+    db.session.add(getuser)
+    db.session.commit()
+    allgroupInfo=getuserInfo(userId)
+    return json.dumps(allgroupInfo)
+
+@app.route('/v1.0/updateuser', methods=['POST'])
+def personal():
+    id= info['id']
+    gender= info['gender']
+    nickname=info['nickName']
+    avatarUrl=info['avatarUrl']
+    tel= info['tel']
+    latitude= info['latitude']
+    longitude= info['longitude']
+    state= info['state']
+    getuser=User.query.filter_by(id=id).first()
+    user=getuser(gender=gender,nickname=nickname,avatarUrl=avatarUrl,tel=tel,latitude=latitude,longitude=longitude,state=state)
+    db.session.add(user)
+    db.session.commit()
+    userInfo={"id":getuser.id,"nickname":getuser.nickname,"state":getuser.state,"gender":getuser.gender,"avatarUrl":getuser.avatarUrl,"tel":getuser.tel,"latitude":getuser.latitude,"longitude":getuser.longitude}
+    return json.dumps(userInfo)
+
+
 
 # @app.before_request
 # def before_request():
