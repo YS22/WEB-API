@@ -3,7 +3,7 @@ from flask import session,request,jsonify
 from flask_login import  login_required 
 from app import app,db,models
 #from forms import LoginForm,RegistrationForm,InfoForm,EstablishForm,JoinForm,IndexForm
-from models import User,Group
+from models import User,Group,Inspect
 #from datetime import datetime
 import json
 from WXBizDataCrypt import WXBizDataCrypt
@@ -103,41 +103,41 @@ def loaction():
 def add():
     name=request.json['name']
     id=request.json['userId']
-    group=Group(name=name,createTime=datetime.date.today())
+    group=Group(name=name,createTime=datetime.date.today(),createrId=id)
     db.session.add(group)
     db.session.commit()
     user=User.query.filter_by(id=id).first()
     user.group.append(group)
     db.session.add(user)
     db.session.commit()
-    allgroupInfo=getuserInfo(id)
-    return json.dumps(allgroupInfo)
+    #allgroupInfo=getuserInfo(id)
+    return json.dumps("ok")
 
 
-@app.route('/v1.0/joingroup', methods=['POST'])
-def join():
-    groupId=request.json['gruopId']
-    userId=request.json['userId']
-    getuser=User.query.filter_by(id=userId).first()
-    getgroup=Group.query.filter_by(id=groupId).first()
-    getuser.group.append(getgroup)
-    db.session.add(getuser)
-    db.session.commit()
-    allgroupInfo=getuserInfo(userId)
-    return json.dumps(allgroupInfo)
+# @app.route('/v1.0/joingroup', methods=['POST'])
+# def join():
+#     groupId=request.json['gruopId']
+#     userId=request.json['userId']
+#     getuser=User.query.filter_by(id=userId).first()
+#     getgroup=Group.query.filter_by(id=groupId).first()
+#     getuser.group.append(getgroup)
+#     db.session.add(getuser)
+#     db.session.commit()
+#     #allgroupInfo=getuserInfo(userId)
+#     return json.dumps("ok")
 
 
 @app.route('/v1.0/abortgroup', methods=['POST'])
 def abort():
-    groupId=request.json['gruopId']
+    groupId=request.json['groupId']
     userId=request.json['userId']
     getuser=User.query.filter_by(id=userId).first()
     getgroup=Group.query.filter_by(id=groupId).first()
     getuser.group.remove(getgroup)
     db.session.add(getuser)
     db.session.commit()
-    allgroupInfo=getuserInfo(userId)
-    return json.dumps(allgroupInfo)
+    #allgroupInfo=getuserInfo(userId)
+    return json.dumps("ok")
 
 @app.route('/v1.0/updateuser', methods=['POST'])
 def personal():
@@ -155,6 +155,52 @@ def personal():
     db.session.commit()
     userInfo={"id":getuser.id,"nickname":getuser.nickname,"state":getuser.state,"gender":getuser.gender,"avatarUrl":getuser.avatarUrl,"tel":getuser.tel,"latitude":getuser.latitude,"longitude":getuser.longitude}
     return json.dumps(userInfo)
+
+@app.route('/v1.0/addrequest', methods=['POST'])
+def apply():
+    groupId= info['groupId']
+    userId= info['userId']
+    user=User.query.filter_by(id=userId).first()
+    groups=Group.query.filter_by(id=groupId).first()
+    usergroup=user.group.all()
+    if groups not in usergroup:
+        createrid=groups.createrId
+        inspect=Inspect(groupid=groupId,userid=userId,time=datetime.date.today(),createrid=createrid)
+        allinspect=Inspect.query.all()
+        if inspect in allinspect:
+            inspect=Inspect(groupid=groupId,userid=userId,time=datetime.date.today(),createrid=createrid)
+
+    return json.dumps("ok")      
+
+@app.route('/v1.0/request', methods=['POST'])
+def query():
+    createrId=info['createrId']
+    inspect=Inspect(createrid=createrId).all() #not only one inspect 
+    inspectInfo=[]
+    for inspects in inspect:
+        inspectsInfo={'groupid':inspects.groupid,'userid':inspects.userid,'createrid':inspects.createrid,'time':inspects.time}
+        inspectInfo.append(inspectsInfo)
+    return json.dumps(inspectInfo)
+
+
+@app.route('/v1.0/joingroup', methods=['POST'])
+def join():
+    groupId=request.json['gruopId']
+    userId=request.json['userId']
+    createrId=request.json['createrId']
+    inspect=Inspect(createrid=createrId,userid=createrId,groupid=groupId)
+    if inspect:
+        getuser=User.query.filter_by(id=userId).first()
+        getgroup=Group.query.filter_by(id=groupId).first()
+        getuser.group.append(getgroup)
+        db.session.add(getuser)
+        db.session.commit()
+        inspectall=Inspect.query.all()
+        inspectall.remove(inspect)
+    return json.dumps("ok")
+
+
+
 
 
 

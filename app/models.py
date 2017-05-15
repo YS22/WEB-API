@@ -18,7 +18,8 @@ class User(db.Model):
     longitude=db.Column(db.String)
     state=db.Column(db.String)
     group = db.relationship('Group',secondary=registrations,backref=db.backref('user', lazy='dynamic'),lazy='dynamic')
-    
+    inspect=db.relationship('Inspect', backref='user', lazy='dynamic')
+
     # def avatar(self, size):
     #     return 'http://www.gravatar.com/avatar/' + md5(self.password).hexdigest() + '?d=mm&s=' + str(size)
 
@@ -44,5 +45,12 @@ class User(db.Model):
 class Group(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String)
+    createrId=db.Column(db.String)
     createTime=db.Column(db.DateTime)
-    
+
+class Inspect(db.Model):
+    groupid=db.Column(db.String, primary_key = True)
+    createrid=db.Column(db.String)
+    userid=db.Column(db.String)
+    time=db.Column(db.DateTime)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
