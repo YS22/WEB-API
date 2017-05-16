@@ -102,30 +102,15 @@ def loaction():
 @app.route('/v1.0/addgroup', methods=['POST'])
 def add():
     name=request.json['name']
-    id=request.json['userId']
-    group=Group(name=name,createTime=datetime.date.today(),createrId=id)
+    createrid=request.json['userId']
+    group=Group(name=name,createTime=datetime.date.today(),createrId=createrid)
     db.session.add(group)
     db.session.commit()
-    user=User.query.filter_by(id=id).first()
+    user=User.query.filter_by(id=createrid).first()
     user.group.append(group)
     db.session.add(user)
     db.session.commit()
-    #allgroupInfo=getuserInfo(id)
     return json.dumps("ok")
-
-
-# @app.route('/v1.0/joingroup', methods=['POST'])
-# def join():
-#     groupId=request.json['gruopId']
-#     userId=request.json['userId']
-#     getuser=User.query.filter_by(id=userId).first()
-#     getgroup=Group.query.filter_by(id=groupId).first()
-#     getuser.group.append(getgroup)
-#     db.session.add(getuser)
-#     db.session.commit()
-#     #allgroupInfo=getuserInfo(userId)
-#     return json.dumps("ok")
-
 
 @app.route('/v1.0/abortgroup', methods=['POST'])
 def abort():
@@ -136,19 +121,16 @@ def abort():
     getuser.group.remove(getgroup)
     db.session.add(getuser)
     db.session.commit()
-    #allgroupInfo=getuserInfo(userId)
     return json.dumps("ok")
 
 @app.route('/v1.0/updateuser', methods=['POST'])
 def personal():
-    id= info['id']
-    gender= info['gender']
-    nickname=info['nickName']
-    avatarUrl=info['avatarUrl']
-    tel= info['tel']
-    latitude= info['latitude']
-    longitude= info['longitude']
-    state= info['state']
+    id= request.json['id']   
+    nickname=request.json['nickname']
+    avatarUrl=request.json['avatarUrl']
+    latitude= request.json['latitude']
+    longitude= request.json['longitude']
+    state= request.json['state']
     getuser=User.query.filter_by(id=id).first()
     user=getuser(gender=gender,nickname=nickname,avatarUrl=avatarUrl,tel=tel,latitude=latitude,longitude=longitude,state=state)
     db.session.add(user)
@@ -158,47 +140,76 @@ def personal():
 
 @app.route('/v1.0/addrequest', methods=['POST'])
 def apply():
-    groupId= info['groupId']
-    userId= info['userId']
+    groupId= request.json['groupId']
+    print "==========+======="
+    print groupId
+    userId= request.json['userId']
     user=User.query.filter_by(id=userId).first()
     groups=Group.query.filter_by(id=groupId).first()
-    usergroup=user.group.all()
-    if groups not in usergroup:
-        createrid=groups.createrId
-        inspect=Inspect(groupid=groupId,userid=userId,time=datetime.date.today(),createrid=createrid)
-        allinspect=Inspect.query.all()
-        if inspect in allinspect:
-            inspect=Inspect(groupid=groupId,userid=userId,time=datetime.date.today(),createrid=createrid)
+    if groups:
+        usergroup=user.group.all()
+        if groups not in usergroup:
+            createrid=groups.createrId
+            creater=User.query.filter_by(id=createrid).first()
+            inspect=Inspect.query.filter_by(groupid=groupId,userid=userId).first()
+            if not inspect:
+                inspect=Inspect(groupid=groupId,userid=userId,time=datetime.date.today(),createrid=createrid)
+                db.session.add(inspect)
+                db.session.commit()
+                return json.dumps(creater.nickname)
+            else:
+                inspect.time=datetime.date.today()
+                db.session.add(inspect)
+                db.session.commit()
+                return json.dumps(creater.nickname)
+        else:
+            return json.dumps("操作无效，你已经是该群成员")
+    else:
+        return json.dumps("未找到该群组")
 
-    return json.dumps("ok")      
-
-@app.route('/v1.0/request', methods=['POST'])
-def query():
-    createrId=info['createrId']
-    inspect=Inspect(createrid=createrId).all() #not only one inspect 
-    inspectInfo=[]
-    for inspects in inspect:
-        inspectsInfo={'groupid':inspects.groupid,'userid':inspects.userid,'createrid':inspects.createrid,'time':inspects.time}
-        inspectInfo.append(inspectsInfo)
-    return json.dumps(inspectInfo)
-
+@app.route('/v1.0/request/<id>', methods=['GET'])
+def query(id):
+    print "++++++++++++"
+    print id
+    inspect=Inspect.query.filter_by(createrid=id).all() 
+    if inspect: 
+        inspectInfo=[]
+        for inspects in inspect:
+            user= User.query.filter_by(id=inspects.userid).first()
+            applynickname=user.nickname
+            applyavatarUrl=user.avatarUrl
+            inspectsInfo={'id':inspects.id,'groupid':inspects.groupid,'nickname':applynickname,'avatarUrl':user.avatarUrl}
+            inspectInfo.append(inspectsInfo)
+        return json.dumps(inspectInfo)
+    else:
+        return json.dumps(0)
 
 @app.route('/v1.0/joingroup', methods=['POST'])
 def join():
-    groupId=request.json['gruopId']
-    userId=request.json['userId']
-    createrId=request.json['createrId']
-    inspect=Inspect(createrid=createrId,userid=createrId,groupid=groupId)
+    id=request.json['requestId']
+    agree=request.json['agree']
+    print type(agree)
+    print "------------"
+    print id
+    inspect=Inspect.query.filter_by(id=id).first()   
     if inspect:
-        getuser=User.query.filter_by(id=userId).first()
-        getgroup=Group.query.filter_by(id=groupId).first()
-        getuser.group.append(getgroup)
-        db.session.add(getuser)
-        db.session.commit()
-        inspectall=Inspect.query.all()
-        inspectall.remove(inspect)
-    return json.dumps("ok")
-
+        if agree=="1":
+            userId=inspect.userid
+            groupId=inspect.groupid
+            getuser=User.query.filter_by(id=userId).first()
+            getgroup=Group.query.filter_by(id=groupId).first()
+            getuser.group.append(getgroup)
+            db.session.add(getuser)
+            db.session.commit()
+            inspect=Inspect.query.filter_by(id=id).delete()
+            db.session.commit()
+            return json.dumps("ok")
+        else:
+            inspect=Inspect.query.filter_by(id=id).delete()
+            db.session.commit()
+            return json.dumps("ok")
+    else:
+        return json.dumps("ok")
 
 
 

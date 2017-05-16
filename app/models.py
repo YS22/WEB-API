@@ -49,7 +49,8 @@ class Group(db.Model):
     createTime=db.Column(db.DateTime)
 
 class Inspect(db.Model):
-    groupid=db.Column(db.String, primary_key = True)
+    id = db.Column(db.Integer, primary_key = True)
+    groupid=db.Column(db.String)
     createrid=db.Column(db.String)
     userid=db.Column(db.String)
     time=db.Column(db.DateTime)
