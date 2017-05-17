@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from flask import session,request,jsonify
-from flask_login import  login_required 
+from flask import session,request
+# from flask_login import  login_required 
 from app import app,db,models
 #from forms import LoginForm,RegistrationForm,InfoForm,EstablishForm,JoinForm,IndexForm
 from models import User,Group,Inspect
@@ -10,27 +10,8 @@ from WXBizDataCrypt import WXBizDataCrypt
 import requests
 import datetime
 
-
-def getuserInfo(id):
-    getUser=User.query.filter_by(id=id).first()
-    groupList=getUser.group.all()
-    allgroupInfo=[]
-    for groups  in groupList:
-        groupsAlluser=groups.user.all()
-        users=[]
-        for userInfo in groupsAlluser:
-            getuserInfo={}
-            getuserInfo={"id":userInfo.id,"nickname":userInfo.nickname,"state":userInfo.state,"gender":userInfo.gender,"avatarUrl":userInfo.avatarUrl,"tel":userInfo.tel,"latitude":userInfo.latitude,"longitude":userInfo.longitude}
-            users.append(getuserInfo)
-        groupsInfo={}
-        groupsInfo={"id":groups.id,"name":groups.name,"createTime":str(groups.createTime),"users":users}
-        allgroupInfo.append(groupsInfo)
-    return allgroupInfo
-
-
 appId = 'wxe5c697071cafbf44'
 appSecret ='e5315816666a005346c0c16aff14b168'
-
 currentId=''
 
 @app.route('/v1.0/login', methods=['POST'])
@@ -77,9 +58,20 @@ def login():
 @app.route('/v1.0/groups/<id>', methods=['GET'])
 #@login_required
 def group(id):
-    allgroupInfo=getuserInfo(id)
+    getUser=User.query.filter_by(id=id).first()
+    groupList=getUser.group.all()
+    allgroupInfo=[]
+    for groups  in groupList:
+        groupsAlluser=groups.user.all()
+        users=[]
+        for userInfo in groupsAlluser:
+            getuserInfo={}
+            getuserInfo={"id":userInfo.id,"nickname":userInfo.nickname,"state":userInfo.state,"gender":userInfo.gender,"avatarUrl":userInfo.avatarUrl,"tel":userInfo.tel,"latitude":userInfo.latitude,"longitude":userInfo.longitude}
+            users.append(getuserInfo)
+        groupsInfo={}
+        groupsInfo={"id":groups.id,"name":groups.name,"createTime":str(groups.createTime),"users":users}
+        allgroupInfo.append(groupsInfo)
     return json.dumps(allgroupInfo)
-
 
 @app.route('/v1.0/location', methods=['POST'])
 def loaction():
@@ -140,17 +132,23 @@ def personal():
 
 @app.route('/v1.0/addrequest', methods=['POST'])
 def apply():
+    """
+    接受请求者id和请求者要加入群组id，首先判断该群是否存在，若存在，再判断该请求者是否已经在
+    该群，若不在，再判断该用户之前有无加入该群申请记录，若没有则创建申请，反之更新申请时间
+    """
     groupId= request.json['groupId']
-    print "==========+======="
-    print groupId
     userId= request.json['userId']
-    user=User.query.filter_by(id=userId).first()
+	
+    # groupId= request.json['groupId']
+    # userId= request.json['userId']
+    # print "==========+======="
+    # print groupId 
     groups=Group.query.filter_by(id=groupId).first()
     if groups:
+        user=User.query.filter_by(id=userId).first()
         usergroup=user.group.all()
         if groups not in usergroup:
-            createrid=groups.createrId
-            creater=User.query.filter_by(id=createrid).first()
+            creater=User.query.filter_by(id=groups.createrId).first()
             inspect=Inspect.query.filter_by(groupid=groupId,userid=userId).first()
             if not inspect:
                 inspect=Inspect(groupid=groupId,userid=userId,time=datetime.date.today(),createrid=createrid)
@@ -169,35 +167,37 @@ def apply():
 
 @app.route('/v1.0/request/<id>', methods=['GET'])
 def query(id):
-    print "++++++++++++"
-    print id
-    inspect=Inspect.query.filter_by(createrid=id).all() 
+    """
+    接受用户id，判断该用户所创群组有无申请者请求记录
+    若有返回 inspectsInfo，若无返回0
+    """
+    inspect=Inspect.query.filter_by(createrid=id).all()
     if inspect: 
         inspectInfo=[]
         for inspects in inspect:
-            user= User.query.filter_by(id=inspects.userid).first()
-            applynickname=user.nickname
-            applyavatarUrl=user.avatarUrl
-            inspectsInfo={'id':inspects.id,'groupid':inspects.groupid,'nickname':applynickname,'avatarUrl':user.avatarUrl}
+            requester= User.query.filter_by(id=inspects.userid).first()
+            inspectsInfo={'id':inspects.id,'groupid':inspects.groupid,'nickname':requester.nickname,'avatarUrl':requester.avatarUrl}
             inspectInfo.append(inspectsInfo)
         return json.dumps(inspectInfo)
     else:
         return json.dumps(0)
 
-@app.route('/v1.0/joingroup', methods=['POST'])
+@app.route('/v1.0/joingroup', methods=['POST']) 
 def join():
-    id=request.json['requestId']
+    """
+    接受inspect的id和agree通过一些判断后再决定
+    对请求者的请求做处理
+    """
+    id=request.json['requestId'] 
     agree=request.json['agree']
-    print type(agree)
-    print "------------"
-    print id
+    # print type(agree)
+    # print "------------"
+    # print id
     inspect=Inspect.query.filter_by(id=id).first()   
     if inspect:
-        if agree=="1":
-            userId=inspect.userid
-            groupId=inspect.groupid
-            getuser=User.query.filter_by(id=userId).first()
-            getgroup=Group.query.filter_by(id=groupId).first()
+        if agree==1:
+            getuser=User.query.filter_by(id=inspect.userid).first()
+            getgroup=Group.query.filter_by(id=inspect.groupid).first()
             getuser.group.append(getgroup)
             db.session.add(getuser)
             db.session.commit()
