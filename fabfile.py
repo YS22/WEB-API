@@ -1,10 +1,10 @@
 from fabric.api import *
-env.hosts =['120.24.156.188']
+env.hosts =['47.93.103.136']
 env.user = 'root'
-env.password ='112358Ys'
+env.password ='1234pttK'
 
 def deploy ():
 	with cd('/srv/WEB-API'):
 		run('git pull')
-		#run('../bin/supervisorctl restart mate')
-		#run('../bin/supervisorctl status')
+		run('/etc/supervisor restart webapi')
+		run('/etc/supervisor status')
