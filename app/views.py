@@ -148,10 +148,10 @@ def apply():
         user=User.query.filter_by(id=userId).first()
         usergroup=user.group.all()
         if groups not in usergroup:
-            creater=User.query.filter_by(id=groups.createrId).first()
+            # creater=User.query.filter_by(id=groups.createrId).first()
             inspect=Inspect.query.filter_by(groupid=groupId,userid=userId).first()
             if not inspect:
-                inspect=Inspect(groupid=groupId,userid=userId,time=datetime.date.today(),createrid=createrid)
+                inspect=Inspect(groupid=groupId,userid=userId,time=datetime.date.today(),createrid=groups.createrId)
                 db.session.add(inspect)
                 db.session.commit()
                 return json.dumps(creater.nickname)
