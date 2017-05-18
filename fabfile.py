@@ -6,5 +6,5 @@ env.password ='1234pttK'
 def deploy ():
 	with cd('/srv/WEB-API'):
 		run('git pull')
-		('supervisorctl restart webapi')
-		('supervisorctl status')
+		run('supervisorctl restart webapi')
+		run('supervisorctl status')
