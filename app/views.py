@@ -9,6 +9,10 @@ import json
 from WXBizDataCrypt import WXBizDataCrypt
 import requests
 import time
+import sys
+reload(sys)
+sys.setdefaultencoding( "utf-8" )
+
 
 appId = 'wxe5c697071cafbf44'
 appSecret ='e5315816666a005346c0c16aff14b168'
