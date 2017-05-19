@@ -99,7 +99,7 @@ def loaction():
 def add():
     name=request.json['name']
     createrid=request.json['userId']
-    group=Group(name=name,createTime=time.date.strftime('%Y-%m-%d',time.localtime(time.time())),createrId=createrid)
+    group=Group(name=name,createTime=datetime.date.strftime('%Y-%m-%d',time.localtime(time.time())),createrId=createrid)
     db.session.add(group)
     db.session.commit()
     user=User.query.filter_by(id=createrid).first()
@@ -155,12 +155,12 @@ def apply():
             creater=User.query.filter_by(id=groups.createrId).first()
             inspect=Inspect.query.filter_by(groupid=groupId,userid=userId).first()
             if not inspect:
-                inspect=Inspect(groupid=groupId,userid=userId,time=time.date.strftime('%Y-%m-%d',time.localtime(time.time())),createrid=groups.createrId)
+                inspect=Inspect(groupid=groupId,userid=userId,time=datetime.date.strftime('%Y-%m-%d',time.localtime(time.time())),createrid=groups.createrId)
                 db.session.add(inspect)
                 db.session.commit()
                 return json.dumps(creater.nickname)
             else:
-                inspect.time=time.date.strftime('%Y-%m-%d',time.localtime(time.time()))
+                inspect.time=datetime.date.strptime('%Y-%m-%d',time.localtime(time.time()))
                 db.session.add(inspect)
                 db.session.commit()
                 return json.dumps(creater.nickname)
