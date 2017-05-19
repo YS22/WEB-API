@@ -160,7 +160,7 @@ def apply():
                 db.session.commit()
                 return json.dumps(creater.nickname)
             else:
-                inspect.time=datetime.date.strftime('%Y-%m-%d',time.localtime(time.time()))
+                inspect.time=date.date.strftime('%Y-%m-%d',time.localtime(time.time()))
                 db.session.add(inspect)
                 db.session.commit()
                 return json.dumps(creater.nickname)
