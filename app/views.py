@@ -8,7 +8,7 @@ from models import User,Group,Inspect
 import json
 from WXBizDataCrypt import WXBizDataCrypt
 import requests
-import datetime
+import time
 
 appId = 'wxe5c697071cafbf44'
 appSecret ='e5315816666a005346c0c16aff14b168'
@@ -95,7 +95,7 @@ def loaction():
 def add():
     name=request.json['name']
     createrid=request.json['userId']
-    group=Group(name=name,createTime=datetime.date.today(),createrId=createrid)
+    group=Group(name=name,createTime=time.strftime('%Y-%m-%d',time.localtime(time.time())),createrId=createrid)
     db.session.add(group)
     db.session.commit()
     user=User.query.filter_by(id=createrid).first()
@@ -151,12 +151,12 @@ def apply():
             creater=User.query.filter_by(id=groups.createrId).first()
             inspect=Inspect.query.filter_by(groupid=groupId,userid=userId).first()
             if not inspect:
-                inspect=Inspect(groupid=groupId,userid=userId,time=datetime.date.today(),createrid=groups.createrId)
+                inspect=Inspect(groupid=groupId,userid=userId,time=time.strftime('%Y-%m-%d',time.localtime(time.time())),createrid=groups.createrId)
                 db.session.add(inspect)
                 db.session.commit()
                 return json.dumps(creater.nickname)
             else:
-                inspect.time=datetime.date.today()
+                inspect.time=time.strftime('%Y-%m-%d',time.localtime(time.time()))
                 db.session.add(inspect)
                 db.session.commit()
                 return json.dumps(creater.nickname)
