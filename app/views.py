@@ -4,7 +4,7 @@ from flask import session,request
 from app import app,db,models
 #from forms import LoginForm,RegistrationForm,InfoForm,EstablishForm,JoinForm,IndexForm
 from models import User,Group,Inspect
-#from datetime import datetime
+from datetime import datetime
 import json
 from WXBizDataCrypt import WXBizDataCrypt
 import requests
@@ -160,7 +160,7 @@ def apply():
                 db.session.commit()
                 return json.dumps(creater.nickname)
             else:
-                inspect.time=time.strftime('%Y-%m-%d',time.localtime(time.time()))
+                inspect.time=datetime.date.strftime('%Y-%m-%d',time.localtime(time.time()))
                 db.session.add(inspect)
                 db.session.commit()
                 return json.dumps(creater.nickname)
