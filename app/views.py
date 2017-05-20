@@ -99,7 +99,7 @@ def loaction():
 def add():
     name=request.json['name']
     createrid=request.json['userId']
-    group=Group(name=name,createTime=datetime.datetime.strftime('%Y-%m-%d',time.localtime(time.time())),createrId=createrid)
+    group=Group(name=name,createTime=time.strftime('%Y-%m-%d',time.localtime(time.time())),createrId=createrid)
     db.session.add(group)
     db.session.commit()
     user=User.query.filter_by(id=createrid).first()
