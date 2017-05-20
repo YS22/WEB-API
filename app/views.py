@@ -44,7 +44,7 @@ def login():
     nickname=info['nickName']
     avatarUrl=info['avatarUrl']
     print "OK----------------"
-    print openId,gender,nickname,avatarUrl
+    # print openId,gender,nickname,avatarUrl
     currentId=openId
     users=User.query.filter_by(id=openId).first()
 
