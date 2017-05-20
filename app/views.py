@@ -73,7 +73,7 @@ def group(id):
             getuserInfo={"id":userInfo.id,"nickname":userInfo.nickname,"state":userInfo.state,"gender":userInfo.gender,"avatarUrl":userInfo.avatarUrl,"tel":userInfo.tel,"latitude":userInfo.latitude,"longitude":userInfo.longitude}
             users.append(getuserInfo)
         groupsInfo={}
-        groupsInfo={"id":groups.id,"name":groups.name,"createTime":str(groups.createTime),"users":users}
+        groupsInfo={"id":groups.id,"name":groups.name,"createTime":groups.createTime,"users":users}
         allgroupInfo.append(groupsInfo)
     return json.dumps(allgroupInfo)
 
@@ -155,12 +155,12 @@ def apply():
             creater=User.query.filter_by(id=groups.createrId).first()
             inspect=Inspect.query.filter_by(groupid=groupId,userid=userId).first()
             if not inspect:
-                inspect=Inspect(groupid=groupId,userid=userId,time=datetime.datetime.strftime('%Y-%m-%d',time.localtime(time.time())),createrid=groups.createrId)
+                inspect=Inspect(groupid=groupId,userid=userId,time=time.strftime('%Y-%m-%d',time.localtime(time.time())),createrid=groups.createrId)
                 db.session.add(inspect)
                 db.session.commit()
                 return json.dumps(creater.nickname)
             else:
-                inspect.time=datetime.datetime.strptime('%Y-%m-%d',time.localtime(time.time()))
+                inspect.time=time.strptime('%Y-%m-%d',time.localtime(time.time()))
                 db.session.add(inspect)
                 db.session.commit()
                 return json.dumps(creater.nickname)

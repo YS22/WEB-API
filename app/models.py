@@ -27,11 +27,11 @@ class Group(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String)
     createrId=db.Column(db.String)
-    createTime=db.Column(db.Date)
+    createTime=db.Column(db.String)
 
 class Inspect(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     groupid=db.Column(db.String)
     createrid=db.Column(db.String)
     userid=db.Column(db.String)
-    time=db.Column(db.Date)
+    time=db.Column(db.String)
