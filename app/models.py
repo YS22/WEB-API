@@ -14,24 +14,24 @@ class User(db.Model):
     gender=db.Column(db.String)
     avatarUrl=db.Column(db.String)
     tel=db.Column(db.String(11))
-    latitude=db.Column(db.String)
-    longitude=db.Column(db.String)
+    latitude=db.Column(db.Float)
+    longitude=db.Column(db.Float)
     state=db.Column(db.String)
     group = db.relationship('Group',secondary=registrations,backref=db.backref('user', lazy='dynamic'),lazy='dynamic')
 
-    def __repr__(self):
-        return '<User %r>' % (self.nickname)
+    # def __repr__(self):
+    #     return '<User %r>' % (self.nickname)
 
 
 class Group(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String)
     createrId=db.Column(db.String)
-    createTime=db.Column(db.String)
+    createTime=db.Column(db.Date)
 
 class Inspect(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     groupid=db.Column(db.String)
     createrid=db.Column(db.String)
     userid=db.Column(db.String)
-    time=db.Column(db.String)
+    time=db.Column(db.Date)

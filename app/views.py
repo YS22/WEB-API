@@ -2,16 +2,15 @@
 from flask import session,request
 # from flask_login import  login_required 
 from app import app,db,models
-#from forms import LoginForm,RegistrationForm,InfoForm,EstablishForm,JoinForm,IndexForm
 from models import User,Group,Inspect
 import datetime
 import json
 from WXBizDataCrypt import WXBizDataCrypt
 import requests
-import time
-# import sys
-# reload(sys)
-# sys.setdefaultencoding( "utf-8" )
+# import time
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 
 appId = 'wxe5c697071cafbf44'
@@ -21,8 +20,8 @@ currentId=''
 @app.route('/v1.0/login', methods=['POST'])
 def login():
     global currentId
-    print "------------------"
-    print request.json
+    # print "------------------"
+    # print request.json
     
     encryptedData=request.json['encryptedData']
     iv=request.json['iv']
@@ -31,24 +30,24 @@ def login():
     #step1:code -> sessionKey
     keyURL= 'https://api.weixin.qq.com/sns/jscode2session?appid='+appId+'&secret='+appSecret+'&js_code='+code+'&grant_type=authorization_code'
     r = requests.post(keyURL)
-    print r.json()
     sessionKey=r.json()["session_key"]
 
     pc = WXBizDataCrypt(appId, sessionKey)
     info= pc.decrypt(encryptedData, iv)
-    print info
-    print type(info)
-    #get info 
     openId= info['openId']
     gender= info['gender']
     nickname=info['nickName']
     avatarUrl=info['avatarUrl']
-    print "OK----------------"
+    print " login OK----------------"
     # print openId,gender,nickname,avatarUrl
     currentId=openId
+    print currentId
     users=User.query.filter_by(id=openId).first()
 
     if users:
+        # user=users(gender=gender,nickname=nickname,avatarUrl=avatarUrl)
+        # db.session.add(user)
+        # db.session.commit()
         userInfo={"id":users.id,"nickname":users.nickname,"state":users.state,"gender":users.gender,"avatarUrl":users.avatarUrl,"tel":users.tel,"latitude":users.latitude,"longitude":users.longitude}
         return json.dumps(userInfo)
     else:
@@ -62,30 +61,34 @@ def login():
 @app.route('/v1.0/groups/<id>', methods=['GET'])
 #@login_required
 def group(id):
+    print id 
     getUser=User.query.filter_by(id=id).first()
-    groupList=getUser.group.all()
-    allgroupInfo=[]
-    for groups  in groupList:
-        groupsAlluser=groups.user.all()
-        users=[]
-        for userInfo in groupsAlluser:
-            getuserInfo={}
-            getuserInfo={"id":userInfo.id,"nickname":userInfo.nickname,"state":userInfo.state,"gender":userInfo.gender,"avatarUrl":userInfo.avatarUrl,"tel":userInfo.tel,"latitude":userInfo.latitude,"longitude":userInfo.longitude}
-            users.append(getuserInfo)
-        groupsInfo={}
-        groupsInfo={"id":groups.id,"name":groups.name,"createTime":groups.createTime,"users":users}
-        allgroupInfo.append(groupsInfo)
-    return json.dumps(allgroupInfo)
+    # print getUser.nickname 
+    if getUser:
+        groupList=getUser.group.all()
+        allgroupInfo=[]
+        for groups  in groupList:
+            groupsAlluser=groups.user.all()
+            users=[]
+            for userInfo in groupsAlluser:
+                getuserInfo={}
+                getuserInfo={"id":userInfo.id,"nickname":userInfo.nickname,"state":userInfo.state,"gender":userInfo.gender,"avatarUrl":userInfo.avatarUrl,"tel":userInfo.tel,"latitude":userInfo.latitude,"longitude":userInfo.longitude}
+                users.append(getuserInfo)
+            groupsInfo={}
+            groupsInfo={"id":groups.id,"name":groups.name,"createTime":str(groups.createTime),"users":users}
+            allgroupInfo.append(groupsInfo)
+        return json.dumps(allgroupInfo)
+    else:
+        return json.dumps("没有找到该用户")
 
 @app.route('/v1.0/location', methods=['POST'])
 def loaction():
-    print "getlocation"
     global currentId
     currentUser=User.query.filter_by(id=currentId).first()
     latitude=request.json['latitude']
     longitude=request.json['longitude']
     if latitude==None or longitude==None:
-        return json.dumps(0)
+        return json.dumps("没有定位该用户")
     else:
         currentUser.latitude=latitude
         currentUser.longitude=longitude
@@ -99,14 +102,14 @@ def loaction():
 def add():
     name=request.json['name']
     createrid=request.json['userId']
-    group=Group(name=name,createTime=time.strftime('%Y-%m-%d',time.localtime(time.time())),createrId=createrid)
+    group=Group(name=name,createTime=datetime.datetime.now(),createrId=createrid)
     db.session.add(group)
     db.session.commit()
     user=User.query.filter_by(id=createrid).first()
     user.group.append(group)
     db.session.add(user)
     db.session.commit()
-    return json.dumps("ok")
+    return json.dumps("创建成功，你已成为群主")
 
 @app.route('/v1.0/abortgroup', methods=['POST'])
 def abort():
@@ -114,25 +117,47 @@ def abort():
     userId=request.json['userId']
     getuser=User.query.filter_by(id=userId).first()
     getgroup=Group.query.filter_by(id=groupId).first()
-    getuser.group.remove(getgroup)
-    db.session.add(getuser)
-    db.session.commit()
-    return json.dumps("ok")
+    if userId==getgroup.createrId:
+        userlist=getgroup.user.all()
+        if len(userlist)>1:
+            return json.dumps("群主不能退群")
+        else:
+            getuser.group.remove(getgroup)
+            db.session.add(getuser)
+            db.session.commit()
+            Group.query.filter_by(id=groupId).delete()
+            db.session.commit()
+            return json.dumps("退群成功")
+
+    else:
+        getuser.group.remove(getgroup)
+        db.session.add(getuser)
+        db.session.commit()
+        return json.dumps("退群成功")
 
 @app.route('/v1.0/updateuser', methods=['POST'])
 def personal():
     id= request.json['id']   
-    nickname=request.json['nickname']
-    avatarUrl=request.json['avatarUrl']
-    latitude= request.json['latitude']
-    longitude= request.json['longitude']
+    # nickname=request.json['nickname']
+    # avatarUrl=request.json['avatarUrl']
+    # latitude= request.json['latitude']
+    # longitude= request.json['longitude']
+    tel=request.json['tel']
     state= request.json['state']
+    print "+++++++++++++++"
+    print "tel:",tel
+    print "state:",state
     getuser=User.query.filter_by(id=id).first()
-    user=getuser(gender=gender,nickname=nickname,avatarUrl=avatarUrl,tel=tel,latitude=latitude,longitude=longitude,state=state)
-    db.session.add(user)
-    db.session.commit()
-    userInfo={"id":getuser.id,"nickname":getuser.nickname,"state":getuser.state,"gender":getuser.gender,"avatarUrl":getuser.avatarUrl,"tel":getuser.tel,"latitude":getuser.latitude,"longitude":getuser.longitude}
-    return json.dumps(userInfo)
+    if getuser:
+        getuser.tel=tel
+        getuser.state=state
+        # user=getuser(tel=tel,state=state)
+        db.session.add(getuser)
+        db.session.commit()
+        userInfo={"id":getuser.id,"nickname":getuser.nickname,"state":getuser.state,"gender":getuser.gender,"avatarUrl":getuser.avatarUrl,"tel":getuser.tel,"latitude":getuser.latitude,"longitude":getuser.longitude}
+        return json.dumps(userInfo)
+    else:
+        return json.dumps("没有找到该用户")
 
 @app.route('/v1.0/addrequest', methods=['POST'])
 def apply():
@@ -155,15 +180,16 @@ def apply():
             creater=User.query.filter_by(id=groups.createrId).first()
             inspect=Inspect.query.filter_by(groupid=groupId,userid=userId).first()
             if not inspect:
-                inspect=Inspect(groupid=groupId,userid=userId,time=time.strftime('%Y-%m-%d',time.localtime(time.time())),createrid=groups.createrId)
+                inspect=Inspect(groupid=groupId,userid=userId,time=datetime.datetime.now(),createrid=groups.createrId)
                 db.session.add(inspect)
                 db.session.commit()
                 return json.dumps(creater.nickname)
             else:
-                inspect.time=time.strptime('%Y-%m-%d',time.localtime(time.time()))
-                db.session.add(inspect)
-                db.session.commit()
-                return json.dumps(creater.nickname)
+                # inspect.time=time.strptime('%Y-%m-%d',time.localtime(time.time()))
+                # db.session.add(inspect)
+                # db.session.commit()
+                # return json.dumps(creater.nickname)
+                return json.dumps("您的请求等待确认")
         else:
             return json.dumps("操作无效，你已经是该群成员")
     else:
@@ -184,7 +210,7 @@ def query(id):
             inspectInfo.append(inspectsInfo)
         return json.dumps(inspectInfo)
     else:
-        return json.dumps(0)
+        return json.dumps("")
 
 @app.route('/v1.0/joingroup', methods=['POST']) 
 def join():
@@ -205,15 +231,15 @@ def join():
             getuser.group.append(getgroup)
             db.session.add(getuser)
             db.session.commit()
-            inspect=Inspect.query.filter_by(id=id).delete()
+            Inspect.query.filter_by(id=id).delete()
             db.session.commit()
-            return json.dumps("ok")
+            return json.dumps("已同意加入")
         else:
-            inspect=Inspect.query.filter_by(id=id).delete()
+            Inspect.query.filter_by(id=id).delete()
             db.session.commit()
-            return json.dumps("ok")
+            return json.dumps("已拒绝加入")
     else:
-        return json.dumps("ok")
+        return json.dumps("")
 
 
 
