@@ -43,11 +43,14 @@ def login():
     currentId=openId
     print currentId
     users=User.query.filter_by(id=openId).first()
-
+    print "==============="
+    print nickname
     if users:
-        # user=users(gender=gender,nickname=nickname,avatarUrl=avatarUrl)
-        # db.session.add(user)
-        # db.session.commit()
+        users.nickname=nickname
+        users.avatarUrl=avatarUrl
+        # user=users(nickname=nickname,avatarUrl=avatarUrl)
+        db.session.add(users)
+        db.session.commit()
         userInfo={"id":users.id,"nickname":users.nickname,"state":users.state,"gender":users.gender,"avatarUrl":users.avatarUrl,"tel":users.tel,"latitude":users.latitude,"longitude":users.longitude}
         return json.dumps(userInfo)
     else:

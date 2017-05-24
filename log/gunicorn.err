@@ -518,3 +518,1326 @@ Traceback (most recent call last):
   File "/home/yz/Desktop/WEB-API/app/views.py", line 113, in abort
     groupId=request.json['groupId']
 KeyError: 'groupId'
+[2017-05-24 01:14:06 +0000] [2480] [INFO] Handling signal: term
+[2017-05-24 01:14:06 +0000] [12595] [INFO] Worker exiting (pid: 12595)
+[2017-05-24 01:14:06 +0000] [12645] [INFO] Worker exiting (pid: 12645)
+[2017-05-24 01:14:06 +0000] [2493] [INFO] Worker exiting (pid: 2493)
+[2017-05-24 01:14:06 +0000] [2494] [INFO] Worker exiting (pid: 2494)
+[2017-05-24 01:14:07 +0000] [2480] [INFO] Shutting down: Master
+[2017-05-24 08:06:54 +0000] [1325] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:06:54 +0000] [1325] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:06:54 +0000] [1325] [ERROR] Retrying in 1 second.
+[2017-05-24 08:06:55 +0000] [1325] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:06:55 +0000] [1325] [ERROR] Retrying in 1 second.
+[2017-05-24 08:06:56 +0000] [1325] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:06:56 +0000] [1325] [ERROR] Retrying in 1 second.
+[2017-05-24 08:06:57 +0000] [1325] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:06:57 +0000] [1325] [ERROR] Retrying in 1 second.
+[2017-05-24 08:06:58 +0000] [1325] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:06:58 +0000] [1325] [ERROR] Retrying in 1 second.
+[2017-05-24 08:06:59 +0000] [1325] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:07:00 +0000] [1621] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:07:00 +0000] [1621] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:00 +0000] [1621] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:01 +0000] [1621] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:01 +0000] [1621] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:02 +0000] [1621] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:02 +0000] [1621] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:03 +0000] [1621] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:03 +0000] [1621] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:04 +0000] [1621] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:04 +0000] [1621] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:05 +0000] [1621] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:07:07 +0000] [1747] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:07:07 +0000] [1747] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:07 +0000] [1747] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:08 +0000] [1747] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:08 +0000] [1747] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:09 +0000] [1747] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:09 +0000] [1747] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:10 +0000] [1747] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:10 +0000] [1747] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:11 +0000] [1747] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:11 +0000] [1747] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:12 +0000] [1747] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:07:13 +0000] [2031] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:07:13 +0000] [2031] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:13 +0000] [2031] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:14 +0000] [2031] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:14 +0000] [2031] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:15 +0000] [2031] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:15 +0000] [2031] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:16 +0000] [2031] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:16 +0000] [2031] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:17 +0000] [2031] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:17 +0000] [2031] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:18 +0000] [2031] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:07:19 +0000] [2099] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:07:19 +0000] [2099] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:19 +0000] [2099] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:20 +0000] [2099] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:20 +0000] [2099] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:21 +0000] [2099] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:21 +0000] [2099] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:22 +0000] [2099] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:22 +0000] [2099] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:23 +0000] [2099] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:23 +0000] [2099] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:24 +0000] [2099] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:07:26 +0000] [2156] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:07:26 +0000] [2156] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:26 +0000] [2156] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:27 +0000] [2156] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:27 +0000] [2156] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:28 +0000] [2156] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:28 +0000] [2156] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:29 +0000] [2156] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:29 +0000] [2156] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:30 +0000] [2156] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:30 +0000] [2156] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:31 +0000] [2156] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:07:32 +0000] [2171] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:07:32 +0000] [2171] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:32 +0000] [2171] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:33 +0000] [2171] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:33 +0000] [2171] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:34 +0000] [2171] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:34 +0000] [2171] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:35 +0000] [2171] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:35 +0000] [2171] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:36 +0000] [2171] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:36 +0000] [2171] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:37 +0000] [2171] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:07:38 +0000] [2206] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:07:38 +0000] [2206] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:38 +0000] [2206] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:39 +0000] [2206] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:39 +0000] [2206] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:40 +0000] [2206] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:40 +0000] [2206] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:41 +0000] [2206] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:41 +0000] [2206] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:42 +0000] [2206] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:42 +0000] [2206] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:43 +0000] [2206] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:07:45 +0000] [2214] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:07:45 +0000] [2214] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:45 +0000] [2214] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:46 +0000] [2214] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:46 +0000] [2214] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:47 +0000] [2214] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:47 +0000] [2214] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:48 +0000] [2214] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:48 +0000] [2214] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:49 +0000] [2214] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:49 +0000] [2214] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:50 +0000] [2214] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:07:51 +0000] [2242] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:07:51 +0000] [2242] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:51 +0000] [2242] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:52 +0000] [2242] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:52 +0000] [2242] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:53 +0000] [2242] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:53 +0000] [2242] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:54 +0000] [2242] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:54 +0000] [2242] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:55 +0000] [2242] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:55 +0000] [2242] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:56 +0000] [2242] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:07:57 +0000] [2255] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:07:57 +0000] [2255] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:57 +0000] [2255] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:58 +0000] [2255] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:58 +0000] [2255] [ERROR] Retrying in 1 second.
+[2017-05-24 08:07:59 +0000] [2255] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:07:59 +0000] [2255] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:00 +0000] [2255] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:00 +0000] [2255] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:01 +0000] [2255] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:01 +0000] [2255] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:02 +0000] [2255] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:08:04 +0000] [2279] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:08:04 +0000] [2279] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:04 +0000] [2279] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:05 +0000] [2279] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:05 +0000] [2279] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:06 +0000] [2279] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:06 +0000] [2279] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:07 +0000] [2279] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:07 +0000] [2279] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:08 +0000] [2279] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:08 +0000] [2279] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:09 +0000] [2279] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:08:10 +0000] [2286] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:08:10 +0000] [2286] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:10 +0000] [2286] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:11 +0000] [2286] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:11 +0000] [2286] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:12 +0000] [2286] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:12 +0000] [2286] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:13 +0000] [2286] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:13 +0000] [2286] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:14 +0000] [2286] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:14 +0000] [2286] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:15 +0000] [2286] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:08:17 +0000] [2291] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:08:17 +0000] [2291] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:17 +0000] [2291] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:18 +0000] [2291] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:18 +0000] [2291] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:19 +0000] [2291] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:19 +0000] [2291] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:20 +0000] [2291] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:20 +0000] [2291] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:21 +0000] [2291] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:21 +0000] [2291] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:22 +0000] [2291] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:08:23 +0000] [2296] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:08:23 +0000] [2296] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:23 +0000] [2296] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:24 +0000] [2296] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:24 +0000] [2296] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:25 +0000] [2296] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:25 +0000] [2296] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:26 +0000] [2296] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:26 +0000] [2296] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:27 +0000] [2296] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:27 +0000] [2296] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:28 +0000] [2296] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:08:29 +0000] [2301] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:08:29 +0000] [2301] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:29 +0000] [2301] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:30 +0000] [2301] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:30 +0000] [2301] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:31 +0000] [2301] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:31 +0000] [2301] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:32 +0000] [2301] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:32 +0000] [2301] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:33 +0000] [2301] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:33 +0000] [2301] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:34 +0000] [2301] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:08:36 +0000] [2306] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:08:36 +0000] [2306] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:36 +0000] [2306] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:37 +0000] [2306] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:37 +0000] [2306] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:38 +0000] [2306] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:38 +0000] [2306] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:39 +0000] [2306] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:39 +0000] [2306] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:40 +0000] [2306] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:40 +0000] [2306] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:41 +0000] [2306] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:08:42 +0000] [2311] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:08:42 +0000] [2311] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:42 +0000] [2311] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:43 +0000] [2311] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:43 +0000] [2311] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:44 +0000] [2311] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:44 +0000] [2311] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:45 +0000] [2311] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:45 +0000] [2311] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:46 +0000] [2311] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:46 +0000] [2311] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:47 +0000] [2311] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:08:48 +0000] [2342] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:08:48 +0000] [2342] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:48 +0000] [2342] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:49 +0000] [2342] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:49 +0000] [2342] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:50 +0000] [2342] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:50 +0000] [2342] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:51 +0000] [2342] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:51 +0000] [2342] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:52 +0000] [2342] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:52 +0000] [2342] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:53 +0000] [2342] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:08:55 +0000] [2350] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:08:55 +0000] [2350] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:55 +0000] [2350] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:56 +0000] [2350] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:56 +0000] [2350] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:57 +0000] [2350] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:57 +0000] [2350] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:58 +0000] [2350] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:58 +0000] [2350] [ERROR] Retrying in 1 second.
+[2017-05-24 08:08:59 +0000] [2350] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:08:59 +0000] [2350] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:00 +0000] [2350] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:09:01 +0000] [2363] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:09:01 +0000] [2363] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:01 +0000] [2363] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:02 +0000] [2363] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:02 +0000] [2363] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:03 +0000] [2363] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:03 +0000] [2363] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:04 +0000] [2363] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:04 +0000] [2363] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:05 +0000] [2363] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:05 +0000] [2363] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:06 +0000] [2363] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:09:08 +0000] [2381] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:09:08 +0000] [2381] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:08 +0000] [2381] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:09 +0000] [2381] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:09 +0000] [2381] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:10 +0000] [2381] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:10 +0000] [2381] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:11 +0000] [2381] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:11 +0000] [2381] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:12 +0000] [2381] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:12 +0000] [2381] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:13 +0000] [2381] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:09:14 +0000] [2386] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:09:14 +0000] [2386] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:14 +0000] [2386] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:15 +0000] [2386] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:15 +0000] [2386] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:16 +0000] [2386] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:16 +0000] [2386] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:17 +0000] [2386] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:17 +0000] [2386] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:18 +0000] [2386] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:18 +0000] [2386] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:19 +0000] [2386] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:09:20 +0000] [2391] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:09:20 +0000] [2391] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:20 +0000] [2391] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:21 +0000] [2391] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:21 +0000] [2391] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:22 +0000] [2391] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:22 +0000] [2391] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:23 +0000] [2391] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:23 +0000] [2391] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:24 +0000] [2391] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:24 +0000] [2391] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:25 +0000] [2391] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:09:27 +0000] [2396] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:09:27 +0000] [2396] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:27 +0000] [2396] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:28 +0000] [2396] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:28 +0000] [2396] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:29 +0000] [2396] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:29 +0000] [2396] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:30 +0000] [2396] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:30 +0000] [2396] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:31 +0000] [2396] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:31 +0000] [2396] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:32 +0000] [2396] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:09:33 +0000] [2401] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:09:33 +0000] [2401] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:33 +0000] [2401] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:34 +0000] [2401] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:34 +0000] [2401] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:35 +0000] [2401] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:35 +0000] [2401] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:36 +0000] [2401] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:36 +0000] [2401] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:37 +0000] [2401] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:37 +0000] [2401] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:38 +0000] [2401] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:09:39 +0000] [2406] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:09:39 +0000] [2406] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:39 +0000] [2406] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:40 +0000] [2406] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:40 +0000] [2406] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:41 +0000] [2406] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:41 +0000] [2406] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:42 +0000] [2406] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:42 +0000] [2406] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:43 +0000] [2406] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:43 +0000] [2406] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:44 +0000] [2406] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:09:46 +0000] [2411] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:09:46 +0000] [2411] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:46 +0000] [2411] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:47 +0000] [2411] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:47 +0000] [2411] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:48 +0000] [2411] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:48 +0000] [2411] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:49 +0000] [2411] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:49 +0000] [2411] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:50 +0000] [2411] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:50 +0000] [2411] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:51 +0000] [2411] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:09:52 +0000] [2416] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:09:52 +0000] [2416] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:52 +0000] [2416] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:53 +0000] [2416] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:53 +0000] [2416] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:54 +0000] [2416] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:54 +0000] [2416] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:55 +0000] [2416] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:55 +0000] [2416] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:56 +0000] [2416] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:56 +0000] [2416] [ERROR] Retrying in 1 second.
+[2017-05-24 08:09:57 +0000] [2416] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:09:59 +0000] [2423] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:09:59 +0000] [2423] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:09:59 +0000] [2423] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:00 +0000] [2423] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:00 +0000] [2423] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:01 +0000] [2423] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:01 +0000] [2423] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:02 +0000] [2423] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:02 +0000] [2423] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:03 +0000] [2423] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:03 +0000] [2423] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:04 +0000] [2423] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:10:05 +0000] [2428] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:10:05 +0000] [2428] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:05 +0000] [2428] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:06 +0000] [2428] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:06 +0000] [2428] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:07 +0000] [2428] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:07 +0000] [2428] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:08 +0000] [2428] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:08 +0000] [2428] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:09 +0000] [2428] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:09 +0000] [2428] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:10 +0000] [2428] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:10:11 +0000] [2433] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:10:11 +0000] [2433] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:11 +0000] [2433] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:12 +0000] [2433] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:12 +0000] [2433] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:13 +0000] [2433] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:13 +0000] [2433] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:14 +0000] [2433] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:14 +0000] [2433] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:15 +0000] [2433] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:15 +0000] [2433] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:16 +0000] [2433] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:10:18 +0000] [2438] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:10:18 +0000] [2438] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:18 +0000] [2438] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:19 +0000] [2438] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:19 +0000] [2438] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:20 +0000] [2438] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:20 +0000] [2438] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:21 +0000] [2438] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:21 +0000] [2438] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:22 +0000] [2438] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:22 +0000] [2438] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:23 +0000] [2438] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:10:24 +0000] [2443] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:10:24 +0000] [2443] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:24 +0000] [2443] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:25 +0000] [2443] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:25 +0000] [2443] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:26 +0000] [2443] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:26 +0000] [2443] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:27 +0000] [2443] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:27 +0000] [2443] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:28 +0000] [2443] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:28 +0000] [2443] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:29 +0000] [2443] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:10:30 +0000] [2448] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:10:30 +0000] [2448] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:30 +0000] [2448] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:31 +0000] [2448] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:31 +0000] [2448] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:32 +0000] [2448] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:32 +0000] [2448] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:33 +0000] [2448] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:33 +0000] [2448] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:34 +0000] [2448] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:34 +0000] [2448] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:35 +0000] [2448] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:10:37 +0000] [2453] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:10:37 +0000] [2453] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:37 +0000] [2453] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:38 +0000] [2453] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:38 +0000] [2453] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:39 +0000] [2453] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:39 +0000] [2453] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:40 +0000] [2453] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:40 +0000] [2453] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:41 +0000] [2453] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:41 +0000] [2453] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:42 +0000] [2453] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:10:43 +0000] [2458] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:10:43 +0000] [2458] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:43 +0000] [2458] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:44 +0000] [2458] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:44 +0000] [2458] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:45 +0000] [2458] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:45 +0000] [2458] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:46 +0000] [2458] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:46 +0000] [2458] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:47 +0000] [2458] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:47 +0000] [2458] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:48 +0000] [2458] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:10:50 +0000] [2463] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:10:50 +0000] [2463] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:50 +0000] [2463] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:51 +0000] [2463] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:51 +0000] [2463] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:52 +0000] [2463] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:52 +0000] [2463] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:53 +0000] [2463] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:53 +0000] [2463] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:54 +0000] [2463] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:54 +0000] [2463] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:55 +0000] [2463] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:10:56 +0000] [2470] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:10:56 +0000] [2470] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:56 +0000] [2470] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:57 +0000] [2470] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:57 +0000] [2470] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:58 +0000] [2470] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:58 +0000] [2470] [ERROR] Retrying in 1 second.
+[2017-05-24 08:10:59 +0000] [2470] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:10:59 +0000] [2470] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:00 +0000] [2470] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:00 +0000] [2470] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:01 +0000] [2470] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:11:02 +0000] [2475] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:11:02 +0000] [2475] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:02 +0000] [2475] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:03 +0000] [2475] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:03 +0000] [2475] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:04 +0000] [2475] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:04 +0000] [2475] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:05 +0000] [2475] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:05 +0000] [2475] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:06 +0000] [2475] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:06 +0000] [2475] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:07 +0000] [2475] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:11:09 +0000] [2480] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:11:09 +0000] [2480] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:09 +0000] [2480] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:10 +0000] [2480] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:10 +0000] [2480] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:11 +0000] [2480] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:11 +0000] [2480] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:12 +0000] [2480] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:12 +0000] [2480] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:13 +0000] [2480] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:13 +0000] [2480] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:14 +0000] [2480] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:11:15 +0000] [2485] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:11:15 +0000] [2485] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:15 +0000] [2485] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:16 +0000] [2485] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:16 +0000] [2485] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:17 +0000] [2485] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:17 +0000] [2485] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:18 +0000] [2485] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:18 +0000] [2485] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:19 +0000] [2485] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:19 +0000] [2485] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:20 +0000] [2485] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:11:21 +0000] [2490] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:11:21 +0000] [2490] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:21 +0000] [2490] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:22 +0000] [2490] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:22 +0000] [2490] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:23 +0000] [2490] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:23 +0000] [2490] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:24 +0000] [2490] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:24 +0000] [2490] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:25 +0000] [2490] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:25 +0000] [2490] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:26 +0000] [2490] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:11:28 +0000] [2623] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:11:28 +0000] [2623] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:28 +0000] [2623] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:29 +0000] [2623] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:29 +0000] [2623] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:30 +0000] [2623] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:30 +0000] [2623] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:31 +0000] [2623] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:31 +0000] [2623] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:32 +0000] [2623] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:32 +0000] [2623] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:33 +0000] [2623] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:11:34 +0000] [2628] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:11:34 +0000] [2628] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:34 +0000] [2628] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:35 +0000] [2628] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:35 +0000] [2628] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:36 +0000] [2628] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:36 +0000] [2628] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:37 +0000] [2628] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:37 +0000] [2628] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:38 +0000] [2628] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:38 +0000] [2628] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:39 +0000] [2628] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:11:41 +0000] [2635] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:11:41 +0000] [2635] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:41 +0000] [2635] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:42 +0000] [2635] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:42 +0000] [2635] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:43 +0000] [2635] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:43 +0000] [2635] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:44 +0000] [2635] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:44 +0000] [2635] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:45 +0000] [2635] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:45 +0000] [2635] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:46 +0000] [2635] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:11:47 +0000] [2640] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:11:47 +0000] [2640] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:47 +0000] [2640] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:48 +0000] [2640] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:48 +0000] [2640] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:49 +0000] [2640] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:49 +0000] [2640] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:50 +0000] [2640] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:50 +0000] [2640] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:51 +0000] [2640] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:51 +0000] [2640] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:52 +0000] [2640] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:11:53 +0000] [2645] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:11:53 +0000] [2645] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:53 +0000] [2645] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:54 +0000] [2645] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:54 +0000] [2645] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:55 +0000] [2645] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:55 +0000] [2645] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:56 +0000] [2645] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:56 +0000] [2645] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:57 +0000] [2645] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:11:57 +0000] [2645] [ERROR] Retrying in 1 second.
+[2017-05-24 08:11:58 +0000] [2645] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:12:00 +0000] [2680] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:12:00 +0000] [2680] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:00 +0000] [2680] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:01 +0000] [2680] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:01 +0000] [2680] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:02 +0000] [2680] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:02 +0000] [2680] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:03 +0000] [2680] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:03 +0000] [2680] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:04 +0000] [2680] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:04 +0000] [2680] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:05 +0000] [2680] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:12:06 +0000] [2685] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:12:06 +0000] [2685] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:06 +0000] [2685] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:07 +0000] [2685] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:07 +0000] [2685] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:08 +0000] [2685] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:08 +0000] [2685] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:09 +0000] [2685] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:09 +0000] [2685] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:10 +0000] [2685] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:10 +0000] [2685] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:11 +0000] [2685] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:12:13 +0000] [2690] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:12:13 +0000] [2690] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:13 +0000] [2690] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:14 +0000] [2690] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:14 +0000] [2690] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:15 +0000] [2690] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:15 +0000] [2690] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:16 +0000] [2690] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:16 +0000] [2690] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:17 +0000] [2690] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:17 +0000] [2690] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:18 +0000] [2690] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:12:19 +0000] [2695] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:12:19 +0000] [2695] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:19 +0000] [2695] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:20 +0000] [2695] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:20 +0000] [2695] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:21 +0000] [2695] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:21 +0000] [2695] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:22 +0000] [2695] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:22 +0000] [2695] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:23 +0000] [2695] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:23 +0000] [2695] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:24 +0000] [2695] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:12:25 +0000] [2700] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:12:25 +0000] [2700] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:25 +0000] [2700] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:26 +0000] [2700] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:26 +0000] [2700] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:27 +0000] [2700] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:27 +0000] [2700] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:28 +0000] [2700] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:28 +0000] [2700] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:29 +0000] [2700] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:29 +0000] [2700] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:30 +0000] [2700] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:12:32 +0000] [2705] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:12:32 +0000] [2705] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:32 +0000] [2705] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:33 +0000] [2705] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:33 +0000] [2705] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:34 +0000] [2705] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:34 +0000] [2705] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:35 +0000] [2705] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:35 +0000] [2705] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:36 +0000] [2705] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:36 +0000] [2705] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:37 +0000] [2705] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:12:38 +0000] [2710] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:12:38 +0000] [2710] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:38 +0000] [2710] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:39 +0000] [2710] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:39 +0000] [2710] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:40 +0000] [2710] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:40 +0000] [2710] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:41 +0000] [2710] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:41 +0000] [2710] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:42 +0000] [2710] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:42 +0000] [2710] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:43 +0000] [2710] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:12:44 +0000] [2715] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:12:44 +0000] [2715] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:44 +0000] [2715] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:45 +0000] [2715] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:45 +0000] [2715] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:46 +0000] [2715] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:46 +0000] [2715] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:47 +0000] [2715] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:47 +0000] [2715] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:48 +0000] [2715] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:48 +0000] [2715] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:49 +0000] [2715] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:12:51 +0000] [2720] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:12:51 +0000] [2720] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:51 +0000] [2720] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:52 +0000] [2720] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:52 +0000] [2720] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:53 +0000] [2720] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:53 +0000] [2720] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:54 +0000] [2720] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:54 +0000] [2720] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:55 +0000] [2720] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:55 +0000] [2720] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:56 +0000] [2720] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:12:57 +0000] [2727] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:12:57 +0000] [2727] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:57 +0000] [2727] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:58 +0000] [2727] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:58 +0000] [2727] [ERROR] Retrying in 1 second.
+[2017-05-24 08:12:59 +0000] [2727] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:12:59 +0000] [2727] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:00 +0000] [2727] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:00 +0000] [2727] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:01 +0000] [2727] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:01 +0000] [2727] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:02 +0000] [2727] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:13:04 +0000] [2732] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:13:04 +0000] [2732] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:04 +0000] [2732] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:05 +0000] [2732] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:05 +0000] [2732] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:06 +0000] [2732] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:06 +0000] [2732] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:07 +0000] [2732] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:07 +0000] [2732] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:08 +0000] [2732] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:08 +0000] [2732] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:09 +0000] [2732] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:13:10 +0000] [2737] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:13:10 +0000] [2737] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:10 +0000] [2737] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:11 +0000] [2737] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:11 +0000] [2737] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:12 +0000] [2737] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:12 +0000] [2737] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:13 +0000] [2737] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:13 +0000] [2737] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:14 +0000] [2737] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:14 +0000] [2737] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:15 +0000] [2737] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:13:16 +0000] [2742] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:13:16 +0000] [2742] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:16 +0000] [2742] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:17 +0000] [2742] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:17 +0000] [2742] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:18 +0000] [2742] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:18 +0000] [2742] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:19 +0000] [2742] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:19 +0000] [2742] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:20 +0000] [2742] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:20 +0000] [2742] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:21 +0000] [2742] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:13:23 +0000] [2747] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:13:23 +0000] [2747] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:23 +0000] [2747] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:24 +0000] [2747] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:24 +0000] [2747] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:25 +0000] [2747] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:25 +0000] [2747] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:26 +0000] [2747] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:26 +0000] [2747] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:27 +0000] [2747] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:27 +0000] [2747] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:28 +0000] [2747] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:13:29 +0000] [2752] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:13:29 +0000] [2752] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:29 +0000] [2752] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:30 +0000] [2752] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:30 +0000] [2752] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:31 +0000] [2752] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:31 +0000] [2752] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:32 +0000] [2752] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:32 +0000] [2752] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:33 +0000] [2752] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:33 +0000] [2752] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:34 +0000] [2752] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:13:35 +0000] [2757] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:13:35 +0000] [2757] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:35 +0000] [2757] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:36 +0000] [2757] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:36 +0000] [2757] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:37 +0000] [2757] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:37 +0000] [2757] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:38 +0000] [2757] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:38 +0000] [2757] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:39 +0000] [2757] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:39 +0000] [2757] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:40 +0000] [2757] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:13:42 +0000] [2762] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:13:42 +0000] [2762] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:42 +0000] [2762] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:43 +0000] [2762] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:43 +0000] [2762] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:44 +0000] [2762] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:44 +0000] [2762] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:45 +0000] [2762] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:45 +0000] [2762] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:46 +0000] [2762] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:46 +0000] [2762] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:47 +0000] [2762] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:13:48 +0000] [2767] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:13:48 +0000] [2767] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:48 +0000] [2767] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:49 +0000] [2767] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:49 +0000] [2767] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:50 +0000] [2767] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:50 +0000] [2767] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:51 +0000] [2767] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:51 +0000] [2767] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:52 +0000] [2767] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:52 +0000] [2767] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:53 +0000] [2767] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:13:55 +0000] [2774] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:13:55 +0000] [2774] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:55 +0000] [2774] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:56 +0000] [2774] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:56 +0000] [2774] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:57 +0000] [2774] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:57 +0000] [2774] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:58 +0000] [2774] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:58 +0000] [2774] [ERROR] Retrying in 1 second.
+[2017-05-24 08:13:59 +0000] [2774] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:13:59 +0000] [2774] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:00 +0000] [2774] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:14:01 +0000] [2779] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:14:01 +0000] [2779] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:01 +0000] [2779] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:02 +0000] [2779] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:02 +0000] [2779] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:03 +0000] [2779] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:03 +0000] [2779] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:04 +0000] [2779] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:04 +0000] [2779] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:05 +0000] [2779] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:05 +0000] [2779] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:06 +0000] [2779] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:14:07 +0000] [2784] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:14:07 +0000] [2784] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:07 +0000] [2784] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:08 +0000] [2784] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:08 +0000] [2784] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:09 +0000] [2784] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:09 +0000] [2784] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:10 +0000] [2784] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:10 +0000] [2784] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:11 +0000] [2784] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:11 +0000] [2784] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:12 +0000] [2784] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:14:14 +0000] [2789] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:14:14 +0000] [2789] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:14 +0000] [2789] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:15 +0000] [2789] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:15 +0000] [2789] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:16 +0000] [2789] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:16 +0000] [2789] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:17 +0000] [2789] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:17 +0000] [2789] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:18 +0000] [2789] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:18 +0000] [2789] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:19 +0000] [2789] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:14:20 +0000] [2794] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:14:20 +0000] [2794] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:20 +0000] [2794] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:21 +0000] [2794] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:21 +0000] [2794] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:22 +0000] [2794] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:22 +0000] [2794] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:23 +0000] [2794] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:23 +0000] [2794] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:24 +0000] [2794] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:24 +0000] [2794] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:25 +0000] [2794] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:14:26 +0000] [2799] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:14:26 +0000] [2799] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:26 +0000] [2799] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:27 +0000] [2799] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:27 +0000] [2799] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:28 +0000] [2799] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:28 +0000] [2799] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:29 +0000] [2799] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:29 +0000] [2799] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:30 +0000] [2799] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:30 +0000] [2799] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:31 +0000] [2799] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:14:33 +0000] [2804] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:14:33 +0000] [2804] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:33 +0000] [2804] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:34 +0000] [2804] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:34 +0000] [2804] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:35 +0000] [2804] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:35 +0000] [2804] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:36 +0000] [2804] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:36 +0000] [2804] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:37 +0000] [2804] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:37 +0000] [2804] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:38 +0000] [2804] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:14:39 +0000] [2809] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:14:39 +0000] [2809] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:39 +0000] [2809] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:40 +0000] [2809] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:40 +0000] [2809] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:41 +0000] [2809] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:41 +0000] [2809] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:42 +0000] [2809] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:42 +0000] [2809] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:43 +0000] [2809] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:43 +0000] [2809] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:44 +0000] [2809] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:14:46 +0000] [2814] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:14:46 +0000] [2814] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:46 +0000] [2814] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:47 +0000] [2814] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:47 +0000] [2814] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:48 +0000] [2814] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:48 +0000] [2814] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:49 +0000] [2814] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:49 +0000] [2814] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:50 +0000] [2814] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:50 +0000] [2814] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:51 +0000] [2814] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:14:52 +0000] [2819] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:14:52 +0000] [2819] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:52 +0000] [2819] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:53 +0000] [2819] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:53 +0000] [2819] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:54 +0000] [2819] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:54 +0000] [2819] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:55 +0000] [2819] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:55 +0000] [2819] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:56 +0000] [2819] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:56 +0000] [2819] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:57 +0000] [2819] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:14:58 +0000] [2826] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:14:58 +0000] [2826] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:58 +0000] [2826] [ERROR] Retrying in 1 second.
+[2017-05-24 08:14:59 +0000] [2826] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:14:59 +0000] [2826] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:00 +0000] [2826] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:00 +0000] [2826] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:01 +0000] [2826] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:01 +0000] [2826] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:02 +0000] [2826] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:02 +0000] [2826] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:03 +0000] [2826] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:15:05 +0000] [2831] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:15:05 +0000] [2831] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:05 +0000] [2831] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:06 +0000] [2831] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:06 +0000] [2831] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:07 +0000] [2831] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:07 +0000] [2831] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:08 +0000] [2831] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:08 +0000] [2831] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:09 +0000] [2831] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:09 +0000] [2831] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:10 +0000] [2831] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:15:11 +0000] [2836] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:15:11 +0000] [2836] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:11 +0000] [2836] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:12 +0000] [2836] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:12 +0000] [2836] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:13 +0000] [2836] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:13 +0000] [2836] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:14 +0000] [2836] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:14 +0000] [2836] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:15 +0000] [2836] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:15 +0000] [2836] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:16 +0000] [2836] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:15:18 +0000] [2841] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:15:18 +0000] [2841] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:18 +0000] [2841] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:19 +0000] [2841] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:19 +0000] [2841] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:20 +0000] [2841] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:20 +0000] [2841] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:21 +0000] [2841] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:21 +0000] [2841] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:22 +0000] [2841] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:22 +0000] [2841] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:23 +0000] [2841] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:15:24 +0000] [2846] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:15:24 +0000] [2846] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:24 +0000] [2846] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:25 +0000] [2846] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:25 +0000] [2846] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:26 +0000] [2846] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:26 +0000] [2846] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:27 +0000] [2846] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:27 +0000] [2846] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:28 +0000] [2846] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:28 +0000] [2846] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:29 +0000] [2846] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:15:30 +0000] [2851] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:15:30 +0000] [2851] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:30 +0000] [2851] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:31 +0000] [2851] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:31 +0000] [2851] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:32 +0000] [2851] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:32 +0000] [2851] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:33 +0000] [2851] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:33 +0000] [2851] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:34 +0000] [2851] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:34 +0000] [2851] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:35 +0000] [2851] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:15:37 +0000] [2857] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:15:37 +0000] [2857] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:37 +0000] [2857] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:38 +0000] [2857] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:38 +0000] [2857] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:39 +0000] [2857] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:39 +0000] [2857] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:40 +0000] [2857] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:40 +0000] [2857] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:41 +0000] [2857] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:41 +0000] [2857] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:42 +0000] [2857] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:15:43 +0000] [2862] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:15:43 +0000] [2862] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:43 +0000] [2862] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:44 +0000] [2862] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:44 +0000] [2862] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:45 +0000] [2862] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:45 +0000] [2862] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:46 +0000] [2862] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:46 +0000] [2862] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:47 +0000] [2862] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:47 +0000] [2862] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:48 +0000] [2862] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:15:49 +0000] [2867] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:15:49 +0000] [2867] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:49 +0000] [2867] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:50 +0000] [2867] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:50 +0000] [2867] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:51 +0000] [2867] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:51 +0000] [2867] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:52 +0000] [2867] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:52 +0000] [2867] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:53 +0000] [2867] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:53 +0000] [2867] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:54 +0000] [2867] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:15:56 +0000] [2874] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:15:56 +0000] [2874] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:56 +0000] [2874] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:57 +0000] [2874] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:57 +0000] [2874] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:58 +0000] [2874] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:58 +0000] [2874] [ERROR] Retrying in 1 second.
+[2017-05-24 08:15:59 +0000] [2874] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:15:59 +0000] [2874] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:00 +0000] [2874] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:00 +0000] [2874] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:01 +0000] [2874] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:16:02 +0000] [2879] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:16:02 +0000] [2879] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:02 +0000] [2879] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:03 +0000] [2879] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:03 +0000] [2879] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:04 +0000] [2879] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:04 +0000] [2879] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:05 +0000] [2879] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:05 +0000] [2879] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:06 +0000] [2879] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:06 +0000] [2879] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:07 +0000] [2879] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:16:09 +0000] [2884] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:16:09 +0000] [2884] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:09 +0000] [2884] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:10 +0000] [2884] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:10 +0000] [2884] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:11 +0000] [2884] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:11 +0000] [2884] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:12 +0000] [2884] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:12 +0000] [2884] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:13 +0000] [2884] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:13 +0000] [2884] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:14 +0000] [2884] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:16:15 +0000] [2889] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:16:15 +0000] [2889] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:15 +0000] [2889] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:16 +0000] [2889] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:16 +0000] [2889] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:17 +0000] [2889] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:17 +0000] [2889] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:18 +0000] [2889] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:18 +0000] [2889] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:19 +0000] [2889] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:19 +0000] [2889] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:20 +0000] [2889] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:16:21 +0000] [2894] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:16:21 +0000] [2894] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:21 +0000] [2894] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:22 +0000] [2894] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:22 +0000] [2894] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:23 +0000] [2894] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:23 +0000] [2894] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:24 +0000] [2894] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:24 +0000] [2894] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:25 +0000] [2894] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:25 +0000] [2894] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:26 +0000] [2894] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:16:28 +0000] [2899] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:16:28 +0000] [2899] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:28 +0000] [2899] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:29 +0000] [2899] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:29 +0000] [2899] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:30 +0000] [2899] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:30 +0000] [2899] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:31 +0000] [2899] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:31 +0000] [2899] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:32 +0000] [2899] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:32 +0000] [2899] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:33 +0000] [2899] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:16:34 +0000] [2904] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:16:34 +0000] [2904] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:34 +0000] [2904] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:35 +0000] [2904] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:35 +0000] [2904] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:36 +0000] [2904] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:36 +0000] [2904] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:37 +0000] [2904] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:37 +0000] [2904] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:38 +0000] [2904] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:38 +0000] [2904] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:39 +0000] [2904] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:16:41 +0000] [2909] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:16:41 +0000] [2909] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:41 +0000] [2909] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:42 +0000] [2909] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:42 +0000] [2909] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:43 +0000] [2909] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:43 +0000] [2909] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:44 +0000] [2909] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:44 +0000] [2909] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:45 +0000] [2909] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:45 +0000] [2909] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:46 +0000] [2909] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:16:47 +0000] [2914] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:16:47 +0000] [2914] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:47 +0000] [2914] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:48 +0000] [2914] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:48 +0000] [2914] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:49 +0000] [2914] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:49 +0000] [2914] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:50 +0000] [2914] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:50 +0000] [2914] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:51 +0000] [2914] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:51 +0000] [2914] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:52 +0000] [2914] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:16:53 +0000] [2919] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:16:53 +0000] [2919] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:53 +0000] [2919] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:54 +0000] [2919] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:54 +0000] [2919] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:55 +0000] [2919] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:55 +0000] [2919] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:56 +0000] [2919] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:56 +0000] [2919] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:57 +0000] [2919] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:16:57 +0000] [2919] [ERROR] Retrying in 1 second.
+[2017-05-24 08:16:58 +0000] [2919] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:17:00 +0000] [2926] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:17:00 +0000] [2926] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:00 +0000] [2926] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:01 +0000] [2926] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:01 +0000] [2926] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:02 +0000] [2926] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:02 +0000] [2926] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:03 +0000] [2926] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:03 +0000] [2926] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:04 +0000] [2926] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:04 +0000] [2926] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:05 +0000] [2926] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:17:06 +0000] [2935] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:17:06 +0000] [2935] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:06 +0000] [2935] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:07 +0000] [2935] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:07 +0000] [2935] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:08 +0000] [2935] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:08 +0000] [2935] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:09 +0000] [2935] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:09 +0000] [2935] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:10 +0000] [2935] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:10 +0000] [2935] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:11 +0000] [2935] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:17:12 +0000] [2940] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:17:12 +0000] [2940] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:12 +0000] [2940] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:13 +0000] [2940] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:13 +0000] [2940] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:14 +0000] [2940] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:14 +0000] [2940] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:15 +0000] [2940] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:15 +0000] [2940] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:16 +0000] [2940] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:16 +0000] [2940] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:17 +0000] [2940] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:17:19 +0000] [2945] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:17:19 +0000] [2945] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:19 +0000] [2945] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:20 +0000] [2945] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:20 +0000] [2945] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:21 +0000] [2945] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:21 +0000] [2945] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:22 +0000] [2945] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:22 +0000] [2945] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:23 +0000] [2945] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:23 +0000] [2945] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:24 +0000] [2945] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:17:25 +0000] [2950] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:17:25 +0000] [2950] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:25 +0000] [2950] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:26 +0000] [2950] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:26 +0000] [2950] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:27 +0000] [2950] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:27 +0000] [2950] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:28 +0000] [2950] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:28 +0000] [2950] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:29 +0000] [2950] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:29 +0000] [2950] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:30 +0000] [2950] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:17:32 +0000] [2955] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:17:32 +0000] [2955] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:32 +0000] [2955] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:33 +0000] [2955] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:33 +0000] [2955] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:34 +0000] [2955] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:34 +0000] [2955] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:35 +0000] [2955] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:35 +0000] [2955] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:36 +0000] [2955] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:36 +0000] [2955] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:37 +0000] [2955] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:17:38 +0000] [2964] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:17:38 +0000] [2964] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:38 +0000] [2964] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:39 +0000] [2964] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:39 +0000] [2964] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:40 +0000] [2964] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:40 +0000] [2964] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:41 +0000] [2964] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:41 +0000] [2964] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:42 +0000] [2964] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:42 +0000] [2964] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:43 +0000] [2964] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:17:44 +0000] [2969] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:17:44 +0000] [2969] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:44 +0000] [2969] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:45 +0000] [2969] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:45 +0000] [2969] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:46 +0000] [2969] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:46 +0000] [2969] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:47 +0000] [2969] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:47 +0000] [2969] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:48 +0000] [2969] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:48 +0000] [2969] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:49 +0000] [2969] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:17:51 +0000] [2974] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:17:51 +0000] [2974] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:51 +0000] [2974] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:52 +0000] [2974] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:52 +0000] [2974] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:53 +0000] [2974] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:53 +0000] [2974] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:54 +0000] [2974] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:54 +0000] [2974] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:55 +0000] [2974] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:55 +0000] [2974] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:56 +0000] [2974] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:17:57 +0000] [2981] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:17:57 +0000] [2981] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:57 +0000] [2981] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:58 +0000] [2981] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:58 +0000] [2981] [ERROR] Retrying in 1 second.
+[2017-05-24 08:17:59 +0000] [2981] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:17:59 +0000] [2981] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:00 +0000] [2981] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:00 +0000] [2981] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:01 +0000] [2981] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:01 +0000] [2981] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:02 +0000] [2981] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:18:03 +0000] [2986] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:18:03 +0000] [2986] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:03 +0000] [2986] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:04 +0000] [2986] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:04 +0000] [2986] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:05 +0000] [2986] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:05 +0000] [2986] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:06 +0000] [2986] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:06 +0000] [2986] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:07 +0000] [2986] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:07 +0000] [2986] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:08 +0000] [2986] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:18:10 +0000] [2991] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:18:10 +0000] [2991] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:10 +0000] [2991] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:11 +0000] [2991] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:11 +0000] [2991] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:12 +0000] [2991] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:12 +0000] [2991] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:13 +0000] [2991] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:13 +0000] [2991] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:14 +0000] [2991] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:14 +0000] [2991] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:15 +0000] [2991] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:18:16 +0000] [2997] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:18:16 +0000] [2997] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:16 +0000] [2997] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:17 +0000] [2997] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:17 +0000] [2997] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:18 +0000] [2997] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:18 +0000] [2997] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:19 +0000] [2997] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:19 +0000] [2997] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:20 +0000] [2997] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:20 +0000] [2997] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:21 +0000] [2997] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:18:23 +0000] [3002] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:18:23 +0000] [3002] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:23 +0000] [3002] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:24 +0000] [3002] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:24 +0000] [3002] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:25 +0000] [3002] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:25 +0000] [3002] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:26 +0000] [3002] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:26 +0000] [3002] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:27 +0000] [3002] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:27 +0000] [3002] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:28 +0000] [3002] [ERROR] Can't connect to ('0.0.0.0', 90)
+[2017-05-24 08:18:29 +0000] [3007] [INFO] Starting gunicorn 19.7.1
+[2017-05-24 08:18:29 +0000] [3007] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:29 +0000] [3007] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:30 +0000] [3007] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:30 +0000] [3007] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:31 +0000] [3007] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:31 +0000] [3007] [ERROR] Retrying in 1 second.
+[2017-05-24 08:18:32 +0000] [3007] [ERROR] Connection in use: ('0.0.0.0', 90)
+[2017-05-24 08:18:32 +0000] [3007] [ERROR] Retrying in 1 second.
