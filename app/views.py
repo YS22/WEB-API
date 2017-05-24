@@ -140,31 +140,31 @@ def abort():
 
 @app.route('/v1.0/updateuser', methods=['POST'])
 def personal():
-    id= request.json['id']   
+	id= request.json['id'] 
+	tel=request.json['tel']
+	state= request.json['state']
+	print "+++++++++++++++"
+	print "tel:",tel
+	print "state:",state
+	getuser=User.query.filter_by(id=id).first()
     # nickname=request.json['nickname']
     # avatarUrl=request.json['avatarUrl']
     # latitude= request.json['latitude']
     # longitude= request.json['longitude']
-    tel=request.json['tel']
-    state= request.json['state']
-    print "+++++++++++++++"
-    print "tel:",tel
-    print "state:",state
-    getuser=User.query.filter_by(id=id).first()
-    if getuser:
-        getuser.tel=tel
-        getuser.state=state
-        # user=getuser(tel=tel,state=state)
-        db.session.add(getuser)
-        db.session.commit()
-        userInfo={"id":getuser.id,"nickname":getuser.nickname,"state":getuser.state,"gender":getuser.gender,"avatarUrl":getuser.avatarUrl,"tel":getuser.tel,"latitude":getuser.latitude,"longitude":getuser.longitude}
-        return json.dumps(userInfo)
-    else:
-        return json.dumps("没有找到该用户")
+	if getuser:
+		getuser.tel=tel
+		getuser.state=state
+		db.session.add(getuser)
+		db.session.commit()
+		userInfo={"id":getuser.id,"nickname":getuser.nickname,"state":getuser.state,"gender":getuser.gender,"avatarUrl":getuser.avatarUrl,"tel":getuser.tel,"latitude":getuser.latitude,"longitude":getuser.longitude}
+		return json.dumps(userInfo)
+	else:
+		return json.dumps("没有找到该用户")
 
 @app.route('/v1.0/addrequest', methods=['POST'])
 def apply():
     """
+    加入群组申请：
     接受请求者id和请求者要加入群组id，首先判断该群是否存在，若存在，再判断该请求者是否已经在
     该群，若不在，再判断该用户之前有无加入该群申请记录，若没有则创建申请，反之更新申请时间
     """
@@ -188,10 +188,6 @@ def apply():
                 db.session.commit()
                 return json.dumps(creater.nickname)
             else:
-                # inspect.time=time.strptime('%Y-%m-%d',time.localtime(time.time()))
-                # db.session.add(inspect)
-                # db.session.commit()
-                # return json.dumps(creater.nickname)
                 return json.dumps("您的请求等待确认")
         else:
             return json.dumps("操作无效，你已经是该群成员")
@@ -201,6 +197,7 @@ def apply():
 @app.route('/v1.0/request/<id>', methods=['GET'])
 def query(id):
     """
+    个人信息及群组申请展示：
     接受用户id，判断该用户所创群组有无申请者请求记录
     若有返回 inspectsInfo，若无返回0
     """
@@ -218,14 +215,12 @@ def query(id):
 @app.route('/v1.0/joingroup', methods=['POST']) 
 def join():
     """
+    加入群组：
     接受inspect的id和agree通过一些判断后再决定
     对请求者的请求做处理
     """
     id=request.json['requestId'] 
     agree=request.json['agree']
-    # print type(agree)
-    # print "------------"
-    # print id
     inspect=Inspect.query.filter_by(id=id).first()   
     if inspect:
         if agree==1:
@@ -244,6 +239,31 @@ def join():
     else:
         return json.dumps("")
 
+
+@app.route('/v1.0/nineusers/<id>', methods=['GET']) 
+def nineuser(id):
+    """
+    搜索群组信息：服务器接受groupid，判断有无该群组，有则返回前9人部分信息，
+    否则返回未找到该群组
+    """
+    group=Group.query.filter_by(id=id).first()
+	
+    if group:
+        nineuser=group.user.all()[0:8]
+        nineuserInfo=[]
+        for user in nineuser:
+            userInfo={'nickname':user.nickname,'avatarUrl':user.avatarUrl}
+            nineuserInfo.append(userInfo)
+        return json.dumps(nineuserInfo)
+    else:
+        return json.dumps("")
+
+
+        
+
+
+
+    
 
 
 
