@@ -1,5 +1,2 @@
 *.pyc
 app.db
-/db_repository/
-/log/
-/venv/
