@@ -127,20 +127,20 @@ def abort():
 	if userId==getgroup.createrId:
 		userlist=getgroup.user.all()
 		if len(userlist)>1:
-			return json.dumps("群主不能退群")
+			return json.dumps("用户大于一个时，创建者不能退群")
 		else:
 			getuser.group.remove(getgroup)
 			db.session.add(getuser)
 			db.session.commit()
 			Group.query.filter_by(id=groupId).delete()
 			db.session.commit()
-			return json.dumps("退群成功")
+			return json.dumps("退出通讯群成功！")
 
 	else:
 		getuser.group.remove(getgroup)
 		db.session.add(getuser)
 		db.session.commit()
-		return json.dumps("退群成功")
+		return json.dumps("退出通讯群成功！")
 
 @app.route('/v1.0/updateuser', methods=['POST'])
 def personal():
@@ -195,13 +195,13 @@ def apply():
 				inspect=Inspect(groupid=groupId,userid=userId,time=datetime.datetime.now(),createrid=groups.createrId)
 				db.session.add(inspect)
 				db.session.commit()
-				return json.dumps(creater.nickname)
+				return json.dumps("申请成功")
 			else:
-				return json.dumps("您的请求等待确认")
+				return json.dumps("已提交申请")
 		else:
-			return json.dumps("操作无效，你已经是该群成员")
+			return json.dumps("你已经是该通讯群成员")
 	else:
-		return json.dumps("未找到该群组")
+		return json.dumps("未找到该通讯群")
 
 @app.route('/v1.0/request/<id>', methods=['GET'])
 def query(id):
@@ -210,14 +210,27 @@ def query(id):
 	接受用户id，判断该用户所创群组有无申请者请求记录
 	若有返回 inspectsInfo，若无返回0
 	"""
-	inspect=Inspect.query.filter_by(createrid=id).all()
-	if inspect: 
-		inspectInfo=[]
-		for inspects in inspect:
+	inspectCheck=Inspect.query.filter_by(createrid=id).all() #as check
+	inspectApply=Inspect.query.filter_by(userid=id).all() #as apply
+
+	if inspectCheck or inspectApply:
+
+		inspectCheckInfo=[]
+		for inspects in inspectCheck:
+			groupname=Group.query.filter_by(id=inspects.groupid).first().name
 			requester= User.query.filter_by(id=inspects.userid).first()
-			inspectsInfo={'id':inspects.id,'groupid':inspects.groupid,'nickname':requester.nickname,'avatarUrl':requester.avatarUrl}
-			inspectInfo.append(inspectsInfo)
-		return json.dumps(inspectInfo)
+			CheckInfo={'id':inspects.id,'groupid':inspects.groupid,'groupName':groupname,'nickname':requester.nickname,'avatarUrl':requester.avatarUrl}
+			inspectCheckInfo.append(CheckInfo)
+
+		inspectApplyInfo=[]
+		for inspects in inspectApply:
+			groupname=Group.query.filter_by(id=inspects.groupid).first().name
+			creater= User.query.filter_by(id=inspects.createrid).first()
+			ApplyInfo={'id':inspects.id,'groupid':inspects.groupid,'groupName':groupname,'nickname':creater.nickname,'avatarUrl':creater.avatarUrl}
+			inspectApplyInfo.append(ApplyInfo)
+
+		allInfo={"check":inspectCheckInfo,"apply":inspectApplyInfo}
+		return json.dumps(allInfo)
 	else:
 		return json.dumps("")
 
@@ -258,7 +271,7 @@ def nineuser(id):
 	group=Group.query.filter_by(id=id).first()
 	
 	if group:
-		nineuser=group.user.all()[0:8]
+		nineuser=group.user.all()[0:9]
 		nineuserInfo=[]
 		for user in nineuser:
 			userInfo={'nickname':user.nickname,'avatarUrl':user.avatarUrl}
@@ -266,261 +279,3 @@ def nineuser(id):
 		return json.dumps(nineuserInfo)
 	else:
 		return json.dumps("")
-
-
-		
-
-
-
-	
-
-
-
-
-# @app.before_request
-# def before_request():
-#     g.user = current_user
-#     print "=========================="
-#     #print current_user.nickname
-
-	# user=User.query.filter_by(nickname=nickname).first()
-	# if user:
-	#     return jsonify({'nickname':user.nickname})
-	# else:
-	#     user = User(nickname=nickname)
-	#     db.session.add(user)
-	#     db.session.commit()
-	#     return jsonify({'nickname':user.nickname})
-	
-
-
-"""
-@app.route('/', methods=['GET', 'POST'])
-@app.route('/login', methods=['GET', 'POST'])
-@oid.loginhandler
-def login(): 
-	if g.user is not None and g.user.is_authenticated():
-		return redirect(url_for('index'))
-	form = LoginForm() 
-	if form.validate_on_submit():
-		user = User.query.filter_by(nickname=form.nickname.data).first()
-		if user is not None and user.password==form.password.data:
-			login_user(user, form.remember_me.data)
-			return redirect(url_for('index'))  
-		flash(u'密码或用户名错误!')
-return render_template('login.html', form=form)
-"""
-"""
-@app.route('/index', methods=['GET', 'POST'])
-@login_required
-def index():
-	role_list=[]
-	ren_lenth=0
-	form = IndexForm()
-	zu = Group.query.filter_by(groupname=form.name.data).first()
-	if form.validate_on_submit():
-		if zu is None :
-			flash(u'此群未建立！')
-		else:
-			 ren_list=zu.user.all()
-			 ren_lenth=len(ren_list)
-			 if g.user in ren_list:
-				for rens in ren_list:
-					role_list.append(rens.role[0])   
-			 else:
-				flash(u'你不属于该群成员！')
-				return redirect(url_for('index'))   
-	group_list= g.user.group.all()
-	position_list=[]
-	name_list=[]
-	tel_list=[]
-	for role in role_list:
-		position_list.append(role.position)
-		name_list.append(role.name)
-		tel_list.append(role.tel)
-	return render_template('index.html',
-						   title='Home',
-						   form=form,
-						   position_list=position_list,name_list=name_list,tel_list=tel_list,role_list=role_list,group_list=group_list,zu=zu,ren_lenth=ren_lenth)
-
-	
-@lm.user_loader
-def load_user(id):
-	return User.query.get(int(id))
-
-
-@oid.after_login
-def after_login(resp):
-	if resp.email is None or resp.email == "":
-		flash('Invalid login. Please try again.')
-		return redirect(url_for('login'))
-	user = User.query.filter_by(email=resp.email).first()
-	if user is None:
-		nickname = resp.nickname
-		if nickname is None or nickname == "":
-			nickname = resp.email.split('@')[0]
-		user = User(nickname=nickname, email=resp.email)
-		db.session.add(user)
-		db.session.commit()
-	remember_me = False
-	if 'remember_me' in session:
-		remember_me = session['remember_me']
-		session.pop('remember_me', None)
-	login_user(user, remember = remember_me)
-	return redirect(request.args.get('next') or url_for('index'))
-
-
-@app.before_request
-def before_request():
-	g.user = current_user
-
-
-@app.route('/logout')
-def logout():
-	logout_user()
-	return redirect(url_for('login'))
-
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-	form = RegistrationForm()
-	if form.validate_on_submit():
-		user = User(nickname=form.nickname.data,password=form.password.data)
-		db.session.add(user)
-		db.session.commit()
-		flash(u'注册成功，请登录！')
-		return redirect(url_for('login'))
-	if User.query.filter_by(nickname=form.nickname.data).first():
-		flash(u'用户名已注册')
-	return render_template('register.html', form=form)
-@app.route('/edit', methods=['GET', 'POST'])
-@login_required
-def edit():
-	form = InfoForm()
-	if form.validate_on_submit():
-		role = Role.query.filter_by(name=form.name.data).first()
-		user_role=g.user.role.all()
-		if user_role==[]:
-			roles= Role(position=form.position.data,name=form.name.data,tel=form.tel.data,author=g.user)
-			db.session.add(roles)
-			db.session.commit()
-			flash(u'信息添加成功！')
-		else:
-			if role is not None:
-				if  g.user.role[0].name==role.name:
-					role.position=form.position.data
-					role.tel=form.tel.data
-					db.session.add(role)
-					db.session.commit()
-					flash(u'信息修改成功！')
-					
-				else:
-					flash(u'真实姓名不符，无法修改！') 
-
-			else:
-				flash(u'真实姓名不符，无法修改！')
-
-	role_list= models.Role.query.all()
-	position_list=[]
-	name_list=[]
-	tel_list=[]
-	positions=[]
-	names=[]
-	tels=[]
-	for role in role_list:
-		position_list.append(role.position)
-		name_list.append(role.name)
-		tel_list.append(role.tel)
-	return render_template('edit.html',
-						   title='Home',
-						   form=form,
-						   position_list=position_list,name_list=name_list,tel_list=tel_list,role_list=role_list)
-
-
-@app.route('/group', methods=['GET', 'POST'])
-@login_required
-def group():
-	form = EstablishForm()
-	if form.validate_on_submit():
-		l = Group.query.filter_by(groupname=form.name.data).first()
-		user_role=g.user.role.all()
-		if l is None:
-			if user_role==[]:
-				 flash(u'请编辑你的信息再创建群组！')
-				 return redirect(url_for('group'))
-			else:
-				group = Group(groupname=form.name.data)
-				db.session.add(group)
-				db.session.commit()
-				g.user.group.append(group)
-				db.session.add(g.user)
-				db.session.commit()
-				flash(u'创建成功,你已是该群成员！') 
-		else:
-			flash(u'该名称已被占用！')
-	return render_template('group.html', form=form)
-
-@app.route('/join', methods=['GET', 'POST'])
-@login_required
-def join():
-	form = JoinForm()
-	if form.validate_on_submit():
-		s = Group.query.filter_by(groupname=form.name.data).first()
-		user_role=g.user.role.all()
-		if s is None:
-			flash(u'此群未建立')
-		else:
-			ren_list=s.user.all()
-			for ren in ren_list:
-				if ren==g.user:
-					flash(u'你在该组群，不需重新加入！')
-					return redirect(url_for('join'))
-			else:
-				if user_role==[]:
-					flash(u'请先编辑你的信息，再加入群组！')
-					return redirect(url_for('join'))
-				else:
-					g.user.group.append(s)
-					db.session.add(g.user)
-					db.session.commit()
-					flash(u'加入成功！')					      
-	return render_template('join.html', form=form)
-
-@app.route('/groupinfo', methods=['GET', 'POST'])
-@login_required
-def groupinfo():
-	group_list=g.user.group.all() 
-	group_lenth=len(group_list)                                                                                                          
-	return render_template('groupinfo.html',group_list=group_list,group_lenth=group_lenth)
-	
-
-@app.route('/dele', methods=['GET', 'POST'])
-@login_required
-def dele():
-	  form = JoinForm()
-	  role_list=[]
-	  zu = Group.query.filter_by(groupname=form.name.data).first()
-	  if form.validate_on_submit():
-		  if zu is not None:
-				 ren_list=zu.user.all()
-				 if g.user in ren_list:
-					for rens in ren_list:
-						role_list.append(rens.role[0])
-					role_list.remove(g.user.role[0])
-					g.user.group.remove(zu)
-					db.session.add(g.user)
-					db.session.commit()
-					flash(u'你已从该群移出！')      
-				 else:
-					flash(u'操作无效，你不是该群成员！')
-					return redirect(url_for('dele'))
-		  else:
-			flash(u'请正确输入群名！')
-			return redirect(url_for('dele')) 
-	  return render_template('delete.html',
-						   title='Home',
-						   form=form,
-						   zu=zu)
-
-"""
-
